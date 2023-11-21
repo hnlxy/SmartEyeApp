@@ -1,7 +1,7 @@
 <template>
     <view class="uni-container">
         <view class="body">
-            <view class="title">
+            <view class="uni-title title">
                 <text class="uni-title-text">智眼守护</text>
             </view>
             <navigator url="/pages/user/login">
@@ -43,7 +43,7 @@
     }
 
     .title {
-        text-align: center;
+        color: white;
         margin-top: 700rpx;
     }
 

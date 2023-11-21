@@ -1,6 +1,6 @@
 <template>
     <view class="content">
-        <image src="../../../static/img/login.jpg" mode=""></image>
+        首页
     </view>
 </template>
 

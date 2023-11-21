@@ -1,25 +1,41 @@
 <template>
-	<view class="content">
-		页面 - 1
-	</view>
+    <view class="content">
+        <image src="../../../static/img/login.jpg" mode=""></image>
+    </view>
 </template>
 
 <script>
-export default {
-	data() {
-		return {
-			title: 'Hello'
-		};
-	},
-	onLoad() {},
-	methods: {}
-};
+    export default {
+        data() {
+            return {
+                title: 'Hello'
+            };
+        },
+        onLoad() {},
+        methods: {}
+    };
 </script>
 
-<style>
-.content {
-	text-align: center;
-	height: 400upx;
-	margin-top: 200upx;
-}
+<style lang="scss">
+    .uni-flex {
+        width: 1000rpx;
+        height: 1000rpx;
+        border: 1rpx solid red;
+        background-color: bisque;
+    }
+
+    .hover {
+        background-color: pink;
+    }
+
+    .scroll {
+        border: 1rpx solid rebeccapurple;
+        width: 750rpx;
+        height: 500rpx;
+    }
+
+
+    .swiper {
+        background-color: red;
+    }
 </style>

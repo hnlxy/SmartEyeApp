@@ -2,6 +2,13 @@
     "pages": [
         //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
+            "path": "pages/user/login-or-register",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
             "path": "pages/tabbar/tabbar-1/tabbar-1",
             "style": {
 
@@ -42,6 +49,20 @@
         {
             "path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
             "style": {}
+        },
+        {
+            "path": "pages/user/register",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+        },
+        {
+            "path": "pages/user/login",
+            "style": {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
         }
     ],
     "globalStyle": {

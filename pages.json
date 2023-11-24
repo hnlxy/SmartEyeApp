@@ -72,28 +72,29 @@
         "backgroundColor": "#F8F8F8"
     },
     "tabBar": {
-        "backgroundColor": "#aaffff",
+		"height": "80px",
+        "backgroundColor": "#06ADB3",
         "color": "#919ea3",
-        "selectedColor": "#55aaff",
+        "selectedColor": "#ffffff",
         "iconfontSrc": "static/fonts/iconfont.ttf",
         "list": [{
                 "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
-                "text": "首页",
+                "text": "",
                 "iconfont": {
                     "text": "\ue703",
                     "color": "#919ea3",
                     "selectedText": "\ue702",
-                    "selectedColor": "#55aaff"
+                    "selectedColor": "#ffffff"
                 }
             },
             {
                 "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
-                "text": "活动",
+                "text": "",
                 "iconfont": {
                     "text": "\ue6de",
                     "color": "#919ea3",
                     "selectedText": "\ue6e0",
-                    "selectedColor": "#55aaff"
+                    "selectedColor": "#ffffff"
                 }
             },
             // #ifdef MP-WEIXIN
@@ -109,28 +110,28 @@
                     "text": "\ue70c",
                     "color": "#919ea3",
                     "selectedText": "\ue70b",
-                    "selectedColor": "#55aaff"
+                    "selectedColor": "#ffffff"
                 }
             },
             // #endif
             {
                 "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
-                "text": "通讯录",
+                "text": "",
                 "iconfont": {
                     "text": "\ue6e3",
                     "color": "#919ea3",
                     "selectedText": "\ue6e2",
-                    "selectedColor": "#55aaff"
+                    "selectedColor": "#ffffff"
                 }
             },
             {
                 "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
-                "text": "个人中心",
+                "text": "",
                 "iconfont": {
                     "text": "\ue70e",
                     "color": "#919ea3",
                     "selectedText": "\ue70f",
-                    "selectedColor": "#55aaff"
+                    "selectedColor": "#ffffff"
                 }
             }
         ]

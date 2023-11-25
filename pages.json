@@ -11,7 +11,7 @@
         {
             "path": "pages/tabbar/tabbar-1/tabbar-1",
             "style": {
-
+				"backgroundColor": "#246d57"
             }
         },
         {
@@ -50,6 +50,28 @@
             "path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
             "style": {}
         },
+		{
+		    "path": "/pages/tabbar/tabbar-1/xueya",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-1/xueyang",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-1/xuetang",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-1/xinlv",
+		    "style": {}
+		},
+		// {
+		//     "path": "pages/tabbar/tabbar-4/tabbar-4/chat",
+		//     "style": {
+		// 		"navigationBarTitleText": "聊天"
+		// 	}
+		// },
         {
             "path": "pages/user/register",
             "style": {
@@ -68,34 +90,30 @@
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "智眼守护",
-        "navigationBarBackgroundColor": "#F8F8F8",
-        "backgroundColor": "#F8F8F8"
+        "navigationBarBackgroundColor": "#e0f0e9",
+		"enablePullDownRefresh": false,
+		"backgroundColor": "#9ccdc3"
+		
     },
     "tabBar": {
 		"height": "80px",
-        "backgroundColor": "#06ADB3",
+        "backgroundColor": "#3eede7",
         "color": "#919ea3",
         "selectedColor": "#ffffff",
         "iconfontSrc": "static/fonts/iconfont.ttf",
+		"borderStyle": "white",
+		"iconWidth": "45px",
         "list": [{
                 "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
                 "text": "",
-                "iconfont": {
-                    "text": "\ue703",
-                    "color": "#919ea3",
-                    "selectedText": "\ue702",
-                    "selectedColor": "#ffffff"
-                }
+                "iconPath": "static/img/tabbar/index.png",
+				"selectedIconPath": "static/img/tabbar/index(selected).png"
             },
             {
                 "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
                 "text": "",
-                "iconfont": {
-                    "text": "\ue6de",
-                    "color": "#919ea3",
-                    "selectedText": "\ue6e0",
-                    "selectedColor": "#ffffff"
-                }
+                "iconPath": "static/img/tabbar/arrange.png",
+				"selectedIconPath": "static/img/tabbar/arrange(selected).png"
             },
             // #ifdef MP-WEIXIN
             {
@@ -106,33 +124,21 @@
             // #ifndef MP-WEIXIN
             {
                 "pagePath": "pages/tabbar/tabbar-3/tabbar-3",
-                "iconfont": {
-                    "text": "\ue70c",
-                    "color": "#919ea3",
-                    "selectedText": "\ue70b",
-                    "selectedColor": "#ffffff"
-                }
+                "iconPath": "static/img/tabbar/sweep.png",
+				"selectedIconPath": "static/img/tabbar/sweep.png"
             },
-            // #endif
+             //#endif
             {
                 "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
                 "text": "",
-                "iconfont": {
-                    "text": "\ue6e3",
-                    "color": "#919ea3",
-                    "selectedText": "\ue6e2",
-                    "selectedColor": "#ffffff"
-                }
+                "iconPath": "static/img/tabbar/contact.png",
+				"selectedIconPath": "static/img/tabbar/contact(selected).png"
             },
             {
                 "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
                 "text": "",
-                "iconfont": {
-                    "text": "\ue70e",
-                    "color": "#919ea3",
-                    "selectedText": "\ue70f",
-                    "selectedColor": "#ffffff"
-                }
+                "iconPath": "static/img/tabbar/user.png",
+				"selectedIconPath": "static/img/tabbar/user(selected).png"
             }
         ]
     }

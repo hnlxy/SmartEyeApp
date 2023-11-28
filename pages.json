@@ -66,12 +66,12 @@
 		    "path": "/pages/tabbar/tabbar-1/xinlv",
 		    "style": {}
 		},
-		// {
-		//     "path": "pages/tabbar/tabbar-4/tabbar-4/chat",
-		//     "style": {
-		// 		"navigationBarTitleText": "聊天"
-		// 	}
-		// },
+		{
+		    "path": "pages/chat/chats",
+		    "style": {
+				"navigationBarTitleText": "聊天"
+			}
+		},
         {
             "path": "pages/user/register",
             "style": {

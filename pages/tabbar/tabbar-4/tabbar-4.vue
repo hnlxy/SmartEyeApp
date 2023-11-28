@@ -12,10 +12,10 @@
 				:title="chat.title"
 				:avatar="chat.avatar"
 				:note="chat.note"
-				:time="chat.time"
 				:badge-positon="chat.badgePositon"
-				:badge-text="chat.badgeText"
-				@click="openChat(chat.id)"
+				:link="reLaunch"
+				:to="pages/chat/chats"
+				@click="openChat(chat.note)"
 				>	
 				</uni-list-chat>
 			</uni-list>
@@ -26,34 +26,27 @@
 <script setup>
 import {ref} from 'vue';
 import { useRouter } from 'vue-router';
-
 const chats = ref([
 	{
 		id:1,
 		title: "小兰护工",
 		avatar:"../../../static/img/face/hugong2.jpg",
-		note: "请照顾好我的母亲!", 
-		time: "2020-02-02 20:20", 
+		note: "+13344333344", 
 		badgePosition: "left", 
-		badgeText: ""
 	},
 	{
 		id:2,
 		title: "小红护工",
 		avatar:"../../../static/img/face/hugong1.png",
-		note: "您好,我是小红护工", 
-		time: "2020-02-02 20:20", 
+		note: "+13344333344", 
 		badgePosition: "left", 
-		badgeText: "9"
 	},
 	{
 		id:3,
 		title: "李院长",
 		avatar:"../../../static/img/face/yuanzhang.png",
-		note: "您好,我是李院长", 
-		time: "2020-02-02 20:20", 
+		note: "+13344333344", 
 		badgePosition: "left", 
-		badgeText: "1"
 	}
 ]);
 
@@ -61,9 +54,8 @@ const router = useRouter();
 
 const openChat = (chatId) => {
 	console.log("打开聊天",chatId);
-	router.push('/chat/' + chatId);
+	router.push('/pages/chat/chats');
 };
-	
 </script>
 
 <style>

@@ -7,12 +7,12 @@
 			<image class="gps" src="../../../static/img/icon/gps.png"></image>	
 			<view class="address" style="color: #0dcbd7; margin-left: 5vw;">保定 莲池区</view>
 		</view>
-		<button @click="edit()" class="set" style="background-color: #0dcbd7; color: aliceblue;"
+		<button @click="edit()" class="set" style="background-color: #0dcbd7; color: aliceblue; margin-top: 3vw;"
 		>
 		<image src="../../../static/img/icon/edit.png" style="width: 6vw;height: 6vw;"></image>
 		更改</button>
 		
-		<uni-section title="显示图标或图片" type="line">
+		<uni-section title="显示图标或图片" type="line" style="margin-top: 3vw;">
 			<uni-list>
 				<uni-list-item style="width: 100vw; height: 20vw;" title="人员变动" note="" showArrow
 					thumb="../../../static/img/user/person_change.png"
@@ -28,32 +28,27 @@
 				
 				<uni-list-item style="width: 100vw; height: 20vw;" title="设置" note="" showArrow
 					thumb="../../../static/img/user/setting.png"
-					thumb-size="sm" rightText=""/>
+					thumb-size="sm"/>
 
 			</uni-list>
 		</uni-section>
 	</view>
 </template>
 
-<script>
-	export default {
-		data() {
-			return {
-				unicodeChar: '\ue623'
-			}
-		},
-		onLoad() {
+<script setup>
+import { useRouter } from 'vue-router'
 
-		},
-		methods: {
+const router = useRouter()
 
-		}
-	}
+ const goToPage = (path) => {
+        router.push(path);
+    };
+
 </script>
 	
 <style>	
 	.container{
-		background: linear-gradient(#d3cce3,#e9e4f0);
+		background: #EBF5F5;
 		
 	}
 
@@ -74,6 +69,7 @@
 		height: 100px;
 		border-radius: 50px; 
 		color: #41555d;
+		margin-top: 5vw;
 		
 	}
 	

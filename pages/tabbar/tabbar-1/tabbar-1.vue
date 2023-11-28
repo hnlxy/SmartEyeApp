@@ -51,7 +51,7 @@ const router = useRouter()
 
 <style lang="scss">
 	.container{
-		background: linear-gradient(#d3cce3,#e9e4f0);
+		background: #EBF5F5;
 		min-height: 100vh;
 	}
 	

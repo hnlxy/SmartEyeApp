@@ -31,7 +31,7 @@ const chats = ref([
 	{
 		id:1,
 		title: "小兰护工",
-		avatar:"https://th.bing.com/th/id/R.23093389b15e24231a082d0290d9df1a?rik=bnfi9ib8ksJ91Q&riu=http%3a%2f%2fphoto16.zastatic.com%2fimages%2fphoto%2f24555%2f98219285%2f1480052631396.jpg%3fscrop%3d1%26crop%3d1%26w%3d650%26h%3d650%26cpos%3dnorth&ehk=y66Nd6kRGDdwd%2bJ7pO41u5avDQ%2boouz4tMQVL5TPHVA%3d&risl=&pid=ImgRaw&r=0",
+		avatar:"../../../static/img/face/hugong2.jpg",
 		note: "请照顾好我的母亲!", 
 		time: "2020-02-02 20:20", 
 		badgePosition: "left", 
@@ -40,7 +40,7 @@ const chats = ref([
 	{
 		id:2,
 		title: "小红护工",
-		avatar:"https://i.postimg.cc/3NnBf7xW/afa7c4fa3aa65d7d1279ef445e725f2.jpg",
+		avatar:"../../../static/img/face/hugong1.png",
 		note: "您好,我是小红护工", 
 		time: "2020-02-02 20:20", 
 		badgePosition: "left", 
@@ -49,7 +49,7 @@ const chats = ref([
 	{
 		id:3,
 		title: "李院长",
-		avatar:"https://i.postimg.cc/44VRL0GP/4fdc592c00882a55e124663bafc73b4.jpg",
+		avatar:"../../../static/img/face/yuanzhang.png",
 		note: "您好,我是李院长", 
 		time: "2020-02-02 20:20", 
 		badgePosition: "left", 

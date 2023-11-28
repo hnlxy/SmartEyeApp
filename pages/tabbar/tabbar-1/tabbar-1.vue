@@ -1,7 +1,7 @@
 <template>
 	<view class="container">
 		<view class="user">
-			<image class="head-pic" src="https://files.oaiusercontent.com/file-OkTG7jvPm8eZfR9XiHRonCvt?se=2023-11-25T04%3A21%3A20Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Dc5231dbc-ec34-493e-826e-ee01aed6b714.webp&sig=w72mOdBQn5xcqq3puQAAz24T7Ch1gRgSHj4MmD5rOoE%3D"></image>
+			<image class="head-pic" src="../../../static/img/face/face1.png"></image>
 			<text class="welcome">Hi,Thomas!</text>
 			<image class="notice" src="../../../static/img/tabbar/news.png" mode="aspectFit"></image>
 			<image class="list" src="../../../static/img/tabbar/list.png" mode="aspectFit"></image>
@@ -51,7 +51,7 @@ const router = useRouter()
 
 <style lang="scss">
 	.container{
-		background-color: #bdcaca;
+		background: linear-gradient(#d3cce3,#e9e4f0);
 		min-height: 100vh;
 	}
 	

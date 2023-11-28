@@ -90,9 +90,8 @@
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "智眼守护",
-        "navigationBarBackgroundColor": "#e0f0e9",
-		"enablePullDownRefresh": false,
-		"backgroundColor": "#9ccdc3"
+        "navigationBarBackgroundColor": "#a7bfe8",
+		"enablePullDownRefresh": false
 		
     },
     "tabBar": {
@@ -100,7 +99,7 @@
         "backgroundColor": "#3eede7",
         "color": "#919ea3",
         "selectedColor": "#ffffff",
-        "iconfontSrc": "static/fonts/iconfont.ttf",
+        "iconfontSrc": "static/fonts/iconfont1.ttf",
 		"borderStyle": "white",
 		"iconWidth": "45px",
         "list": [{

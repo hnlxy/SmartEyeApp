@@ -13,9 +13,12 @@
 				</view>
 				<view class="tabbar-box-item" @click="goToPage('/pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa')">
 					<image class="box-image" src="../../../static/img/qa.png" mode="aspectFit"></image>
-					<text class="explain">提问</text>
+					<text class="explain">提问</text>	
 				</view>
 			</view>
+		</view>
+		<view class="scanCode">
+			<button @click="scanQRCode">123</button>
 		</view>
 	</view>
 </template> 
@@ -43,8 +46,25 @@ export default {
 				url
 			});
 		}
-	}
+	},
+	
+	methods: {
+	    scanQRCode() {
+	      uni.scanCode({
+	        success: (res) => {
+	          console.log('扫描结果：', res.result);
+	          // 处理扫描结果
+	        },
+	        fail: (err) => {
+	          console.error('扫描失败：', err);
+	        }
+	      });
+	    }
+	  }
+	
 };
+
+
 </script>
 
 <style lang="scss" scoped>

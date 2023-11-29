@@ -67,6 +67,7 @@
 		    "style": {}
 		},
 		{
+<<<<<<< HEAD
 		    "path": "/pages/tabbar/tabbar-5/person_change",
 		    "style": {}
 		},
@@ -90,6 +91,13 @@
 		// 		"navigationBarTitleText": "聊天"
 		// 	}
 		// },
+=======
+		    "path": "pages/chat/chats",
+		    "style": {
+				"navigationBarTitleText": "聊天"
+			}
+		},
+>>>>>>> a7550309a11900bde8607823c225c4f938ff64fd
         {
             "path": "pages/user/register",
             "style": {

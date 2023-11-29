@@ -14,19 +14,19 @@
 		
 		<uni-section title="显示图标或图片" type="line" style="margin-top: 3vw;">
 			<uni-list>
-				<uni-list-item style="width: 100vw; height: 20vw;" title="人员变动" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="人员变动" note="" showArrow
 					thumb="../../../static/img/user/person_change.png"
 					thumb-size="sm" rightText=""/>
 					
-				<uni-list-item style="width: 100vw; height: 20vw;" title="地址" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/address')" style="width: 100vw; height: 20vw;" title="地址" note="" showArrow
 					thumb="../../../static/img/user/address.png"
 					thumb-size="sm" rightText=""/>
 					
-				<uni-list-item style="width: 100vw; height: 20vw;" title="帮助中心" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/help')" style="width: 100vw; height: 20vw;" title="帮助中心" note="" showArrow
 					thumb="../../../static/img/user/text.png"
 					thumb-size="sm" rightText=""/>
 				
-				<uni-list-item style="width: 100vw; height: 20vw;" title="设置" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting')" style="width: 100vw; height: 20vw;" title="设置" note="" showArrow
 					thumb="../../../static/img/user/setting.png"
 					thumb-size="sm"/>
 

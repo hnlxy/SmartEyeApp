@@ -2,18 +2,18 @@
     "pages": [
         //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
         {
-            "path": "pages/user/login-or-register",
-            "style": {
-                "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
-            }
-        },
-        {
             "path": "pages/tabbar/tabbar-1/tabbar-1",
             "style": {
 				"backgroundColor": "#246d57"
             }
         },
+		{
+		    "path": "pages/user/login-or-register",
+		    "style": {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		},
         {
             "path": "pages/tabbar/tabbar-2/tabbar-2",
             "style": {
@@ -52,7 +52,7 @@
         },
 		{
 		    "path": "/pages/tabbar/tabbar-1/xueya",
-		    "style": {}
+			"style": {}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-1/xueyang",
@@ -65,6 +65,24 @@
 		{
 		    "path": "/pages/tabbar/tabbar-1/xinlv",
 		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/person_change",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/address",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/help",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/setting",
+		    "style": {
+				"navigationBarTitleText": "设置"
+			}
 		},
 		// {
 		//     "path": "pages/tabbar/tabbar-4/tabbar-4/chat",

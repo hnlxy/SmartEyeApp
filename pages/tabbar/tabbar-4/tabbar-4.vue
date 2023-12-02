@@ -12,7 +12,8 @@
 				:title="chat.title"
 				:avatar="chat.avatar"
 				:note="chat.note"
-				:badge-positon="chat.badgePositon"
+				:badge-positon="left"
+				:badgeText="chat.badge"
 				:link="reLaunch"
 				:to="pages/chat/chats"
 				@click="openChat(chat.note)"
@@ -32,21 +33,21 @@ const chats = ref([
 		title: "小兰护工",
 		avatar:"../../../static/img/face/hugong2.jpg",
 		note: "+13344333344", 
-		badgePosition: "left", 
+		badge: "2"
 	},
 	{
 		id:2,
 		title: "小红护工",
 		avatar:"../../../static/img/face/hugong1.png",
 		note: "+13344333344", 
-		badgePosition: "left", 
+		badge: "1"
 	},
 	{
 		id:3,
 		title: "李院长",
 		avatar:"../../../static/img/face/yuanzhang.png",
 		note: "+13344333344", 
-		badgePosition: "left", 
+		badge: ""
 	}
 ]);
 

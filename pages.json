@@ -51,6 +51,10 @@
             "style": {}
         },
 		{
+		    "path": "/pages/tabbar/tabbar-1/messages",
+			"style": {}
+		},
+		{
 		    "path": "/pages/tabbar/tabbar-1/xueya",
 			"style": {}
 		},

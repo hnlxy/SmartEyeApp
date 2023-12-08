@@ -39,15 +39,19 @@
             }
         },
         {
-            "path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
+            "path": "pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report",
             "style": {}
         },
         {
-            "path": "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
+            "path": "pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record",
             "style": {}
         },
+		{
+		    "path": "pages/tabbar-3-detial/tabbar-3-money/tabbar-3-money",
+		    "style": {}
+		},
         {
-            "path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
+            "path": "pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see",
             "style": {}
         },
 		{

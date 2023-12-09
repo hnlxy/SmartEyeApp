@@ -87,6 +87,14 @@
 		    "style": {}
 		},
 		{
+		    "path": "/pages/tabbar/tabbar-3/verify_code",
+		    "style": {}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-1/video_replay",
+		    "style": {}
+		},
+		{
 		    "path": "/pages/tabbar/tabbar-5/setting",
 		    "style": {
 				"navigationBarTitleText": "设置"

@@ -1,6 +1,6 @@
 <template>
 	<view class="notifications-container">
-		<view class="notification" v-for="item in notifications" :key="item.id">
+		<view class="notification" v-for="item in notifications" :key="item.id" @click="goToReplay(item)">
 			<view class="avatar-container">
 				<img :src="item.avatar" class="avatar" alt="avatar" />
 			</view>
@@ -42,6 +42,13 @@
 			avatar: '../../../static/img/face/face4.png'
 		},
 	]);
+	import {
+		useRouter
+	} from 'vue-router';
+	const router = useRouter();
+	const goToReplay = (item) => {
+		router.push('/pages/tabbar/tabbar-1/video_replay');
+	};
 </script>
 
 

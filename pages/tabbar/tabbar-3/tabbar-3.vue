@@ -16,9 +16,9 @@
 				<image class="icon" src="../../../static/img/tabbar-3/computer.png" mode="aspectFit"></image>
 				<text class="label">监测记录</text>
 			</view>
-			<view class="button salary" @click="goToPage('/pages/tabbar-3-detial/tabbar-3-money/tabbar-3-money')">
-				<image class="icon" src="../../../static/img/tabbar-3/dollar.png" mode="aspectFit"></image>
-				<text class="label">薪资管理</text>
+			<view class="button salary" @click="goToPage('/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach')">
+				<image class="icon" src="../../../static/img/tabbar-3/teach.png" mode="aspectFit"></image>
+				<text class="label">教学管理</text>
 			</view>
 		</view>
 	</view>

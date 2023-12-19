@@ -11,7 +11,7 @@
 	const videoSrc = ref('/static/video.mp4');
 
 	const videoHtml = computed(() => {
-		return `<video autoplay loop muted controls width="100%" height="870px">
+		return `<video autoplay loop muted controls width="100%" direction=90>
             <source src="${videoSrc.value}" type="video/mp4">
           </video>`;
 	});

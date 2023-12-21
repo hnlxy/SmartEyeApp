@@ -1,37 +1,37 @@
 <template>
-	<div class="app">
+	<view class="app">
 		<!-- 统计区域 -->
-		<div class="stats">
+		<view class="stats">
 			<!-- 动态显示当前选中的 Tab 统计信息 -->
-			<div class="stat-item">
-				<div class="stat-key">本周总次数</div>
-				<div class="stat-value">{{ currentStats.weekly }}</div>
-			</div>
-			<div class="stat-item">
-				<div class="stat-key">本月总次数</div>
-				<div class="stat-value">{{ currentStats.monthly }}</div>
-			</div>
-		</div>
+			<view class="stat-item">
+				<view class="stat-key">本周总次数</view>
+				<view class="stat-value">{{ currentStats.weekly }}</view>
+			</view>
+			<view class="stat-item">
+				<view class="stat-key">本月总次数</view>
+				<view class="stat-value">{{ currentStats.monthly }}</view>
+			</view>
+		</view>
 
 		<!-- Tab 切换区域 -->
-		<div class="tabs">
-			<div class="tab-item" v-for="(tab, index) in tabs" :key="index"
+		<view class="tabs">
+			<view class="tab-item" v-for="(tab, index) in tabs" :key="index"
 				:class="{ active: currentTab === tabs[index].value }" @click="switchTab(index)">
 				{{ tab.label }}
-			</div>
-		</div>
+			</view>
+		</view>
 
 		<!-- 当前 Tab 内容区域 -->
-		<div class="tab-content">
-			<div class="event-item" v-for="event in currentTabEvents" :key="event.id">
+		<view class="tab-content">
+			<view class="event-item" v-for="event in currentTabEvents" :key="event.id" @click="goToReplay(item)">
 				<img :src="event.avatar" class="avatar" />
-				<div class="event-info">
-					<div class="event-name">{{ event.name }}</div>
-					<div class="event-time">{{ event.time }}</div>
-				</div>
-			</div>
-		</div>
-	</div>
+				<view class="event-info">
+					<view class="event-name">{{ event.name }}</view>
+					<view class="event-time">{{ event.time }}</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </template>
 
 <script setup>
@@ -40,6 +40,13 @@
 		reactive,
 		computed
 	} from 'vue';
+	import {
+		useRouter
+	} from 'vue-router';
+	const router = useRouter();
+	const goToReplay = (item) => {
+		router.push('/pages/tabbar/tabbar-1/video_replay');
+	};
 	const tabEvents = {
 		tab1: [{
 				id: 1,

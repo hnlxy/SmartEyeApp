@@ -4,7 +4,6 @@
         {
             "path": "pages/tabbar/tabbar-1/tabbar-1",
             "style": {
-				"backgroundColor": "#246d57"
             }
         },
 		{
@@ -61,20 +60,10 @@
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-1/xueya",
-			"style": {}
-		},
-		{
-		    "path": "/pages/tabbar/tabbar-1/xueyang",
-		    "style": {}
-		},
-		{
-		    "path": "/pages/tabbar/tabbar-1/xuetang",
-		    "style": {}
-		},
-		{
-		    "path": "/pages/tabbar/tabbar-1/xinlv",
-		    "style": {}
+		    "path": "/pages/tabbar/tabbar-1/status",
+			"style": {
+			    "navigationBarTitleText": "状态"
+			}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-5/person_change",
@@ -102,12 +91,6 @@
 				"navigationBarTitleText": "设置"
 			}
 		},
-		// {
-		//     "path": "pages/tabbar/tabbar-4/tabbar-4/chat",
-		//     "style": {
-		// 		"navigationBarTitleText": "聊天"
-		// 	}
-		// },
 		{
 		    "path": "pages/chat/chats",
 		    "style": {
@@ -132,13 +115,13 @@
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "智眼守护",
-        "navigationBarBackgroundColor": "#a7bfe8",
+        "navigationBarBackgroundColor": "#ffbb98"
 		"enablePullDownRefresh": false
 		
     },
     "tabBar": {
 		"height": "80px",
-        "backgroundColor": "#3eede7",
+        "backgroundColor": "#ffbb98",
         "color": "#919ea3",
         "selectedColor": "#ffffff",
         "iconfontSrc": "static/fonts/iconfont1.ttf",

@@ -14,7 +14,7 @@
 		<view class="row">
 			<view class="button record" @click="goToPage('/pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record')">
 				<image class="icon" src="../../../static/img/tabbar-3/computer.png" mode="aspectFit"></image>
-				<text class="label">监测记录</text>
+				<text class="label">视频电话</text>
 			</view>
 			<view class="button salary" @click="goToPage('/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach')">
 				<image class="icon" src="../../../static/img/tabbar-3/teach.png" mode="aspectFit"></image>

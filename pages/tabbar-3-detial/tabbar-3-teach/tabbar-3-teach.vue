@@ -1,37 +1,71 @@
 <template>
-  <div class="container">
-    <!-- 循环显示多个视频 -->
-    <div v-for="(video, index) in videos" :key="index" class="video-container">
-      <video controls width="100%" height="auto">
-        <source :src="`@/static/${video.fileName}`" type="video/mp4" />
-        您的浏览器不支持视频播放。
-      </video>
-      <!-- 每个视频的文字内容 -->
-      <div class="text-content">
-        <h2>{{ video.title }}</h2>
-        <p>{{ video.description }}</p>
-      </div>
-    </div>
-  </div>
+  <view class="education-page">
+    <view v-for="(video, index) in videoList" :key="index" class="video-container">
+      <video :src="video.filePath" controls></video>
+      <view class="video-info">
+        <text class="video-title">{{ video.title }}</text>
+		<br>
+        <text class="video-description">{{ video.description }}</text>
+      </view>
+    </view>
+  </view>
 </template>
 
 <script>
 export default {
   data() {
     return {
-      // 假设这些数据来自后端或本地数据源，包含多个视频信息
-      videos: [
+      videoList: [
         {
-          fileName: 'video/teach/fanshen.mp4',
-          title: '翻身（叩背）',
-          description: '长期卧床而自己不能翻身的病人，必须依靠他人协助翻身、拍背，以促进血液循环，给病人以舒适感。然而，长期卧床或体弱无法自行翻身的患者，会导致血液循环障碍，而发生压疮、肌肉挛缩、关节僵硬等并发症。',
+          title: "翻身（叩背）",
+          description: "对于不能自行翻身的老人，定期翻身可以预防床疮（压疮）的发生，维护皮肤健康。",
+          filePath: "/static/video/teach/fanshen.mp4", // 请替换成你的本地视频路径
         },
         {
-          fileName: 'teaching-video2.mp4',
-          title: '偏瘫老人穿服',
-          description: '',
+          title: "测体温",
+          description: "监测体温可以及早发现患有发热等疾病的老人，并采取必要的医疗措施。",
+          filePath: "/static/video/teach/take_ temperature.mp4", // 请替换成你的本地视频路径
         },
-        // 可以继续添加更多视频信息
+        {
+          title: "换尿不湿",
+          description: "对于需要使用尿不湿的老人，及时更换尿不湿可以防止尿液积聚，减少尿布疹的发生。",
+          filePath: "/static/video/teach/change_diapers.mp4", // 请替换成你的本地视频路径
+        },
+		{
+		  title: "换衣服",
+		  description: "保持老人的衣着清洁和整洁，提高舒适度和自尊心。",
+		  filePath: "/static/video/teach/change_clothes.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "喂水",
+		  description: "保持老人充分饮水，防止脱水，有助于肾功能和整体健康。",
+		  filePath: "/static/video/teach/drink_water.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "吃饭",
+		  description: "提供营养均衡的饮食，确保老人获得足够的营养和能量，维持健康和体力。",
+		  filePath: "/static/video/teach/eat.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "吃药",
+		  description: "确保老人按时、按量服用医生开具的药物，以控制慢性疾病、减轻症状或预防疾病的进展。",
+		  filePath: "/static/video/teach/medicine.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "排便排尿",
+		  description: "确保老人定期排尿和排便，预防尿液滞留或便秘等问题，维护泌尿系统和肠道的健康。",
+		  filePath: "/static/video/teach/defecation_urination.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "洗脚",
+		  description: "帮助老人保持足部卫生，减少足部感染和不适感，提高舒适度",
+		  filePath: "/static/video/teach/wash_feet.mp4", // 请替换成你的本地视频路径
+		},
+		{
+		  title: "剪指甲",
+		  description: "保持老人的指甲整洁和舒适，防止指甲太长而导致不适或划伤皮肤。",
+		  filePath: "/static/video/teach/cut_nails.mp4", // 请替换成你的本地视频路径
+		},
       ],
     };
   },
@@ -39,22 +73,23 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  padding: 20px;
-}
-
 .video-container {
   margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
 }
 
-.video {
-  width: 100%;
-  height: auto;
+.video-title {
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.text-content {
+.video-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.video-info {
   margin-top: 10px;
 }
-
-/* 根据需要添加其他样式 */
 </style>

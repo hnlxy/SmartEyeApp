@@ -115,7 +115,7 @@
     "globalStyle": {
         "navigationBarTextStyle": "black",
         "navigationBarTitleText": "智眼守护",
-        "navigationBarBackgroundColor": "#ffbb98"
+        "navigationBarBackgroundColor": "#ffbb98",
 		"enablePullDownRefresh": false
 		
     },

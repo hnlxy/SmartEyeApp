@@ -110,11 +110,12 @@
 	};
 
 	// watch 监听
-	watch(() => {
-		console.log("Route query params:", route.query);
-		actionEvent.value = route.query.actionEvent;
-		elderName.value = route.query.elderName;
+	watch(() => route.query, (newQuery) => {
+		actionEvent.value = newQuery.actionEvent;
+		elderName.value = newQuery.elderName;
 		getServerData();
+	}, {
+		deep: true //深度监听
 	});
 </script>
 
@@ -149,7 +150,7 @@
 		font-size: 28rpx;
 	}
 
-	.date.selected div:nth-child(2) {
+	.date.selected view:nth-child(2) {
 		background-color: #FFC0CB;
 		border-radius: 25rpx;
 		padding: 10rpx;

@@ -4,8 +4,8 @@
 		<view class="name">Thomas</view>
 		
 		<view class="row">
-			<image class="gps" src="../../../static/img/icon/gps.png"></image>	
-			<view class="address" style="color: #0dcbd7; margin-left: 5vw;">保定 莲池区</view>
+			<!-- <image class="gps" src="../../../static/img/icon/gps.png"></image> -->	
+			<view class="address" style="color: #0dcbd7; margin-left: 5vw;">UID：123456</view>
 		</view>
 		<button @click="edit()" class="set" style="background-color: #0dcbd7; color: aliceblue; margin-top: 3vw;"
 		>
@@ -14,8 +14,8 @@
 		
 		<uni-section title="显示图标或图片" type="line" style="margin-top: 3vw;">
 			<uni-list>
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="人员变动" note="" showArrow
-					thumb="../../../static/img/user/person_change.png"
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/bind_uid')" style="width: 100vw; height: 20vw;" title="绑定UID" note="" showArrow
+					thumb="../../../static/img/user/setting/change_password.png"
 					thumb-size="sm" rightText=""/>
 					
 				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/address')" style="width: 100vw; height: 20vw;" title="地址" note="" showArrow

@@ -1,26 +1,26 @@
-<script>
-    export default {
-        onLaunch: function() {
-            console.log('App Launch');
+<script setup>
+import { onMounted, onUnmounted, onActivated, onDeactivated } from 'vue';
 
-            // setTimeout(() => {
-            //     uni.setTabBarBadge({
-            //         index: 1,
-            //         text: '31'
-            //     });
-            //     uni.showTabBarRedDot({
-            //         index: 3
-            //     });
-            // }, 1000);
-        },
-        onShow: function() {
-            console.log('App Show');
-        },
-        onHide: function() {
-            console.log('App Hide');
-        }
-    };
+// 当应用启动时执行
+onMounted(() => {
+    console.log('App Launch');
+    uni.setTabBarBadge({
+        index: 3,
+        text: '3',
+    });
+});
+
+// 当应用显示时执行
+onActivated(() => {
+    console.log('App Show');
+});
+
+// 当应用隐藏时执行
+onDeactivated(() => {
+    console.log('App Hide');
+});
 </script>
+
 
 <style>
     uni-page-body,

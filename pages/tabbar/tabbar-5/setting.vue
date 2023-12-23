@@ -2,15 +2,15 @@
 	<view class="container">
 		<uni-section type="line" style="margin-top: -65vw;">
 			<uni-list>
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="语言" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/language')" style="width: 100vw; height: 20vw;" title="语言" note="" showArrow
 					thumb="../../../static/img/user/setting/language.png"
 					thumb-size="sm" rightText=""/>
 					
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/address')" style="width: 100vw; height: 20vw;" title="支持" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/support')" style="width: 100vw; height: 20vw;" title="支持" note="" showArrow
 					thumb="../../../static/img/user/setting/support.png"
 					thumb-size="sm" rightText=""/>
 					
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/help')" style="width: 100vw; height: 20vw;" title="更改PIN" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/change_PIN')" style="width: 100vw; height: 20vw;" title="更改PIN" note="" showArrow
 					thumb="../../../static/img/user/setting/change_password.png"
 					thumb-size="sm" rightText=""/>
 			</uni-list>
@@ -18,7 +18,7 @@
 		
 		<uni-section type="line" style="margin-top: 5vw;">
 			<uni-list>
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="消息提醒" note=""
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting')" style="width: 100vw; height: 20vw;" title="消息提醒" note=""
 					thumb="../../../static/img/user/text.png"
 					thumb-size="sm" rightText="" showSwitch switchChecked/>
 			</uni-list>
@@ -27,10 +27,10 @@
 		
 		<uni-section type="line" style="margin-top: 5vw;">
 			<uni-list>
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="关于我们" note=""
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/about_us')" style="width: 100vw; height: 20vw;" title="关于我们" note=""
 					thumb="../../../static/img/user/setting/about_us.png"
 					thumb-size="sm" rightText="" showArrow/>
-				<uni-list-item class=" slot-text" clickable @click="goToPage('/pages/tabbar/tabbar-5/person_change')" style="width: 100vw; height: 20vw;" title="退出账号" note=""
+				<uni-list-item class=" slot-text" clickable @click="goToPage('/pages/user/login-or-register')" style="width: 100vw; height: 20vw;" title="退出账号" note=""
 					thumb="../../../static/img/user/setting/close.png"
 					thumb-size="sm"/>
 			</uni-list>
@@ -38,7 +38,13 @@
 	</view>
 </template>
 
-<script>
+<script setup>
+	import { useRouter } from 'vue-router'
+	//跳转页面
+	const router = useRouter()
+	 const goToPage = (path) => {
+	        router.push(path);
+	    };
 </script>
 
 <style lang="scss">

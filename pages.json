@@ -39,19 +39,27 @@
         },
         {
             "path": "pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report",
-            "style": {}
+            "style": {
+				"navigationBarTitleText": "健康报告"
+			}
         },
         {
             "path": "pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record",
-            "style": {}
+            "style": {
+				"navigationBarTitleText": "视频电话"
+			}
         },
 		{
 		    "path": "pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach",
-		    "style": {}
+		    "style": {
+				"navigationBarTitleText": "教学管理"
+			}
 		},
         {
             "path": "pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see",
-            "style": {}
+            "style": {
+				"navigationBarTitleText": "家庭监护"
+			}
         },
 		{
 		    "path": "/pages/tabbar/tabbar-1/messages",
@@ -67,15 +75,45 @@
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-5/bind_uid",
-		    "style": {}
+		    "style": {
+				"navigationBarTitleText": "绑定UID"
+			}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-5/address",
-		    "style": {}
+		    "style": {
+				"navigationBarTitleText": "地址"
+			}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-5/help",
-		    "style": {}
+		    "style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/setting/language",
+		    "style": {
+				"navigationBarTitleText": "设置语言"
+			}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/setting/support",
+		    "style": {
+				"navigationBarTitleText": "支持"
+			}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/setting/change_PIN",
+		    "style": {
+				"navigationBarTitleText": "修改PIN"
+			}
+		},
+		{
+		    "path": "/pages/tabbar/tabbar-5/setting/about_us",
+		    "style": {
+				"navigationBarTitleText": "关于我们"
+			}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-3/verify_code",
@@ -83,7 +121,9 @@
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-1/video_replay",
-		    "style": {}
+		    "style": {
+				"navigationBarTitleText": ""
+			}
 		},
 		{
 		    "path": "/pages/tabbar/tabbar-5/setting",
@@ -100,14 +140,14 @@
         {
             "path": "pages/user/register",
             "style": {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "注册",
                 "enablePullDownRefresh": false
             }
         },
         {
             "path": "pages/user/login",
             "style": {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "登录",
                 "enablePullDownRefresh": false
             }
         }

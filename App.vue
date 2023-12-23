@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, onActivated, onDeactivated } from 'vue';
 
+
 // 当应用启动时执行
 onMounted(() => {
     console.log('App Launch');
@@ -19,6 +20,8 @@ onActivated(() => {
 onDeactivated(() => {
     console.log('App Hide');
 });
+
+
 </script>
 
 

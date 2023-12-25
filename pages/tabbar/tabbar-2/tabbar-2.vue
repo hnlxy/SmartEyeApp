@@ -24,7 +24,7 @@
 		<!-- 当前 Tab 内容区域 -->
 		<view class="tab-content">
 			<view class="event-item" v-for="event in currentTabEvents" :key="event.id" @click="goToReplay(item)">
-				<img :src="event.avatar" class="avatar" />
+				<image :src="event.avatar" class="avatar" />
 				<view class="event-info">
 					<view class="event-name">{{ event.name }}</view>
 					<view class="event-time">{{ event.time }}</view>

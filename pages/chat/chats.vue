@@ -2,7 +2,7 @@
 	<view class="chat">
 		<view v-for="(message, index) in messages" :key="index" class="message" :class="{'self': message.self}">
 			<view class="avatar">
-				<img :src="message.avatar" alt="avatar">
+				<image :src="message.avatar" alt="avatar" />
 			</view>
 			<view class="chat-bubble">
 				{{ message.text }}
@@ -68,7 +68,7 @@
 		flex-direction: row-reverse;
 	}
 
-	.avatar img {
+	.avatar image {
 		width: 50px;
 		height: 50px;
 		border-radius: 50%;

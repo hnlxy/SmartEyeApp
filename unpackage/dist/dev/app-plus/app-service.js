@@ -215,7 +215,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$o], ["__scopeId", "data-v-ae4bee67"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$o], ["__scopeId", "data-v-ae4bee67"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
   const _sfc_main$D = {
     __name: "tabbar-1",
     setup(__props) {
@@ -439,7 +439,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar1Tabbar1 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/tabbar-1.vue"]]);
+  const PagesTabbarTabbar1Tabbar1 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/tabbar-1.vue"]]);
   const _sfc_main$C = {
     data() {
       return {};
@@ -473,7 +473,7 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesUserLoginOrRegister = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$n], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/login-or-register.vue"]]);
+  const PagesUserLoginOrRegister = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$n], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/login-or-register.vue"]]);
   const _sfc_main$B = {
     __name: "tabbar-2",
     setup(__props) {
@@ -619,7 +619,7 @@ if (uni.restoreGlobal) {
                   key: event.id,
                   onClick: _cache[0] || (_cache[0] = ($event) => goToReplay(_ctx.item))
                 }, [
-                  vue.createElementVNode("img", {
+                  vue.createElementVNode("image", {
                     src: event.avatar,
                     class: "avatar"
                   }, null, 8, ["src"]),
@@ -649,7 +649,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar2Tabbar2 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["__scopeId", "data-v-f8aa9678"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-2/tabbar-2.vue"]]);
+  const PagesTabbarTabbar2Tabbar2 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["__scopeId", "data-v-f8aa9678"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-2/tabbar-2.vue"]]);
   const _sfc_main$A = {
     __name: "verify_code",
     emits: ["close", "verify-success"],
@@ -715,7 +715,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar3Verify_code = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["__scopeId", "data-v-11537e5d"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-3/verify_code.vue"]]);
+  const PagesTabbarTabbar3Verify_code = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["__scopeId", "data-v-11537e5d"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-3/verify_code.vue"]]);
   const _sfc_main$z = {
     __name: "tabbar-3",
     setup(__props) {
@@ -808,7 +808,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar3Tabbar3 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["__scopeId", "data-v-afdd7fb7"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-3/tabbar-3.vue"]]);
+  const PagesTabbarTabbar3Tabbar3 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["__scopeId", "data-v-afdd7fb7"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-3/tabbar-3.vue"]]);
   const icons = {
     "id": "2852637",
     "name": "uniui图标库",
@@ -2041,7 +2041,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$m], ["__scopeId", "data-v-d31e1c47"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$m], ["__scopeId", "data-v-d31e1c47"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -2559,7 +2559,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$l], ["__scopeId", "data-v-f07ef577"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$l], ["__scopeId", "data-v-f07ef577"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
   const pages = [
     {
       path: "pages/tabbar/tabbar-1/tabbar-1",
@@ -5762,7 +5762,7 @@ ${i3}
       ])
     ], 8, ["hover-class"]);
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$k], ["__scopeId", "data-v-20df4ef0"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$k], ["__scopeId", "data-v-20df4ef0"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
   const _sfc_main$v = {
     name: "uniList",
     "mp-weixin": {
@@ -5822,7 +5822,7 @@ ${i3}
       })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$j], ["__scopeId", "data-v-c2f1266a"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$j], ["__scopeId", "data-v-c2f1266a"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
   const _sfc_main$u = {
     __name: "tabbar-4",
     setup(__props) {
@@ -5915,7 +5915,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar4Tabbar4 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-4/tabbar-4.vue"]]);
+  const PagesTabbarTabbar4Tabbar4 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-4/tabbar-4.vue"]]);
   const _sfc_main$t = {
     name: "UniBadge",
     emits: ["click"],
@@ -6056,7 +6056,7 @@ ${i3}
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$i], ["__scopeId", "data-v-c97cb896"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$i], ["__scopeId", "data-v-c97cb896"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
   const _sfc_main$s = {
     name: "UniListItem",
     emits: ["click", "switchChange"],
@@ -6423,7 +6423,7 @@ ${i3}
       })) : vue.createCommentVNode("v-if", true)
     ], 14, ["hover-class"]);
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$h], ["__scopeId", "data-v-c7524739"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$h], ["__scopeId", "data-v-c7524739"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
   const _sfc_main$r = {
     __name: "tabbar-5",
     setup(__props) {
@@ -6523,7 +6523,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Tabbar5 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/tabbar-5.vue"]]);
+  const PagesTabbarTabbar5Tabbar5 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/tabbar-5.vue"]]);
   const _sfc_main$q = {
     data() {
       return {
@@ -6537,7 +6537,7 @@ ${i3}
   function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, " 页面 - 发图文 ");
   }
-  const PagesTabbar3DetialTabbar3ReportTabbar3Report = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$g], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report.vue"]]);
+  const PagesTabbar3DetialTabbar3ReportTabbar3Report = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$g], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report.vue"]]);
   const _sfc_main$p = {
     data() {
       return {
@@ -6551,7 +6551,7 @@ ${i3}
   function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, " 页面 - 发视频 ");
   }
-  const PagesTabbar3DetialTabbar3RecordTabbar3Record = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$f], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record.vue"]]);
+  const PagesTabbar3DetialTabbar3RecordTabbar3Record = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$f], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record.vue"]]);
   const _sfc_main$o = {
     __name: "tabbar-3-teach",
     setup(__props) {
@@ -6657,7 +6657,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbar3DetialTabbar3TeachTabbar3Teach = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-e1539014"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach.vue"]]);
+  const PagesTabbar3DetialTabbar3TeachTabbar3Teach = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-e1539014"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach.vue"]]);
   const _sfc_main$n = {
     setup() {
       const videoPlayer = vue.ref(null);
@@ -6760,7 +6760,7 @@ ${i3}
       /* STABLE_FRAGMENT */
     );
   }
-  const PagesTabbar3DetialTabbar3SeeTabbar3See = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$e], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see.vue"]]);
+  const PagesTabbar3DetialTabbar3SeeTabbar3See = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$e], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see.vue"]]);
   const _sfc_main$m = {
     __name: "messages",
     setup(__props) {
@@ -6840,7 +6840,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Messages = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-ea114fca"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/messages.vue"]]);
+  const PagesTabbarTabbar1Messages = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-ea114fca"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/messages.vue"]]);
   const _sfc_main$l = {
     name: "loading1",
     data() {
@@ -6855,7 +6855,7 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$d], ["__scopeId", "data-v-0e645258"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
+  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$d], ["__scopeId", "data-v-0e645258"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
   const _sfc_main$k = {
     name: "loading2",
     data() {
@@ -6870,7 +6870,7 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$c], ["__scopeId", "data-v-3df48dc2"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
+  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$c], ["__scopeId", "data-v-3df48dc2"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
   const _sfc_main$j = {
     name: "loading3",
     data() {
@@ -6885,7 +6885,7 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$b], ["__scopeId", "data-v-27a8293c"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
+  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$b], ["__scopeId", "data-v-27a8293c"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
   const _sfc_main$i = {
     name: "loading5",
     data() {
@@ -6900,7 +6900,7 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$a], ["__scopeId", "data-v-2e7deb83"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
+  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$a], ["__scopeId", "data-v-2e7deb83"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
   const _sfc_main$h = {
     name: "loading6",
     data() {
@@ -6915,7 +6915,7 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$9], ["__scopeId", "data-v-ef674bbb"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
+  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$9], ["__scopeId", "data-v-ef674bbb"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
   const _sfc_main$g = {
     components: { Loading1, Loading2, Loading3, Loading4, Loading5 },
     name: "qiun-loading",
@@ -6943,7 +6943,7 @@ ${i3}
       $props.loadingType == 5 ? (vue.openBlock(), vue.createBlock(_component_Loading5, { key: 4 })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$8], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$8], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
   const _sfc_main$f = {
     name: "qiun-error",
     props: {
@@ -6968,7 +6968,7 @@ ${i3}
       )
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$7], ["__scopeId", "data-v-a99d579b"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$7], ["__scopeId", "data-v-a99d579b"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
   const color$1 = ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"];
   const formatDateTime = (timeStamp, returnType) => {
     var date = /* @__PURE__ */ new Date();
@@ -8749,7 +8749,7 @@ ${i3}
   }
   if (typeof block0 === "function")
     block0(_sfc_main$e);
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$6], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$6], ["__scopeId", "data-v-0ca34aee"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
   const _sfc_main$d = {
     __name: "status",
     setup(__props) {
@@ -8896,7 +8896,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Status = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-023e833e"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/status.vue"]]);
+  const PagesTabbarTabbar1Status = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-023e833e"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/status.vue"]]);
   const _sfc_main$c = {
     __name: "bind_uid",
     setup(__props) {
@@ -8985,12 +8985,12 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Bind_uid = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/bind_uid.vue"]]);
+  const PagesTabbarTabbar5Bind_uid = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/bind_uid.vue"]]);
   const _sfc_main$b = {};
   function _sfc_render$5(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "address");
   }
-  const PagesTabbarTabbar5Address = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$5], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/address.vue"]]);
+  const PagesTabbarTabbar5Address = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$5], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/address.vue"]]);
   const _sfc_main$a = {
     methods: {
       openFeedback() {
@@ -9083,27 +9083,27 @@ ${i3}
       ])
     ]);
   }
-  const PagesTabbarTabbar5Help = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$4], ["__scopeId", "data-v-8e52639b"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/help.vue"]]);
+  const PagesTabbarTabbar5Help = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$4], ["__scopeId", "data-v-8e52639b"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/help.vue"]]);
   const _sfc_main$9 = {};
   function _sfc_render$3(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "设置语言");
   }
-  const PagesTabbarTabbar5SettingLanguage = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$3], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/language.vue"]]);
+  const PagesTabbarTabbar5SettingLanguage = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$3], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/language.vue"]]);
   const _sfc_main$8 = {};
   function _sfc_render$2(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "支持");
   }
-  const PagesTabbarTabbar5SettingSupport = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$2], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/support.vue"]]);
+  const PagesTabbarTabbar5SettingSupport = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$2], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/support.vue"]]);
   const _sfc_main$7 = {};
   function _sfc_render$1(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "更改pin");
   }
-  const PagesTabbarTabbar5SettingChange_PIN = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$1], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/change_PIN.vue"]]);
+  const PagesTabbarTabbar5SettingChange_PIN = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$1], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/change_PIN.vue"]]);
   const _sfc_main$6 = {};
   function _sfc_render(_ctx, _cache) {
     return null;
   }
-  const PagesTabbarTabbar5SettingAbout_us = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/about_us.vue"]]);
+  const PagesTabbarTabbar5SettingAbout_us = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/about_us.vue"]]);
   const _sfc_main$5 = {
     __name: "video_replay",
     setup(__props) {
@@ -9119,39 +9119,14 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Video_replay = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/video_replay.vue"]]);
-  /*!
-    * vue-router v4.1.6
-    * (c) 2022 Eduardo San Martin Morote
-    * @license MIT
-    */
-  var NavigationType;
-  (function(NavigationType2) {
-    NavigationType2["pop"] = "pop";
-    NavigationType2["push"] = "push";
-  })(NavigationType || (NavigationType = {}));
-  var NavigationDirection;
-  (function(NavigationDirection2) {
-    NavigationDirection2["back"] = "back";
-    NavigationDirection2["forward"] = "forward";
-    NavigationDirection2["unknown"] = "";
-  })(NavigationDirection || (NavigationDirection = {}));
-  var NavigationFailureType;
-  (function(NavigationFailureType2) {
-    NavigationFailureType2[NavigationFailureType2["aborted"] = 4] = "aborted";
-    NavigationFailureType2[NavigationFailureType2["cancelled"] = 8] = "cancelled";
-    NavigationFailureType2[NavigationFailureType2["duplicated"] = 16] = "duplicated";
-  })(NavigationFailureType || (NavigationFailureType = {}));
-  const routerKey = Symbol("router");
-  function useRouter() {
-    return vue.inject(routerKey);
-  }
+  const PagesTabbarTabbar1Video_replay = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/video_replay.vue"]]);
   const _sfc_main$4 = {
     __name: "setting",
     setup(__props) {
-      const router = useRouter();
       const goToPage = (path) => {
-        router.push(path);
+        uni.navigateTo({
+          url: path
+        });
       };
       return (_ctx, _cache) => {
         const _component_uni_list_item = resolveEasycom(vue.resolveDynamicComponent("uni-list-item"), __easycom_0$2);
@@ -9273,7 +9248,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Setting = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting.vue"]]);
+  const PagesTabbarTabbar5Setting = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting.vue"]]);
   const _sfc_main$3 = {
     __name: "chats",
     setup(__props) {
@@ -9327,7 +9302,7 @@ ${i3}
                     },
                     [
                       vue.createElementVNode("view", { class: "avatar" }, [
-                        vue.createElementVNode("img", {
+                        vue.createElementVNode("image", {
                           src: message.avatar,
                           alt: "avatar"
                         }, null, 8, ["src"])
@@ -9371,7 +9346,7 @@ ${i3}
       };
     }
   };
-  const PagesChatChats = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/chat/chats.vue"]]);
+  const PagesChatChats = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/chat/chats.vue"]]);
   const _sfc_main$2 = {
     __name: "register",
     setup(__props) {
@@ -9455,7 +9430,7 @@ ${i3}
       };
     }
   };
-  const PagesUserRegister = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/register.vue"]]);
+  const PagesUserRegister = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/register.vue"]]);
   const _sfc_main$1 = {
     __name: "login",
     setup(__props) {
@@ -9510,7 +9485,7 @@ ${i3}
       };
     }
   };
-  const PagesUserLogin = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/login.vue"]]);
+  const PagesUserLogin = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/login.vue"]]);
   __definePage("pages/tabbar/tabbar-1/tabbar-1", PagesTabbarTabbar1Tabbar1);
   __definePage("pages/user/login-or-register", PagesUserLoginOrRegister);
   __definePage("pages/tabbar/tabbar-2/tabbar-2", PagesTabbarTabbar2Tabbar2);
@@ -9556,7 +9531,7 @@ ${i3}
       };
     }
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/App.vue"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "E:/code/qianduan/model/SmartEyeApp/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {

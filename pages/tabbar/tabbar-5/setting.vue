@@ -39,11 +39,12 @@
 </template>
 
 <script setup>
-	import { useRouter } from 'vue-router'
+
 	//跳转页面
-	const router = useRouter()
 	 const goToPage = (path) => {
-	        router.push(path);
+	        uni.navigateTo({
+	        	url: path
+	        })
 	    };
 </script>
 

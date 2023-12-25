@@ -1,0 +1,57 @@
+
+.verification-modal[data-v-11537e5d] {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		z-index: 1000;
+		padding: 20px;
+		background: white;
+		border: 1px solid #ccc;
+		border-radius: 10px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+		width: 300px;
+}
+.input-row[data-v-11537e5d],
+	.button-row[data-v-11537e5d] {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+}
+.input-code[data-v-11537e5d] {
+		flex-grow: 1;
+		margin-right: 10px;
+		padding: 8px 12px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		height: 36px;
+}
+.btn-send[data-v-11537e5d] {
+		padding: 8px 12px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		background-color: #f7f7f7;
+		cursor: pointer;
+		line-height: 36px;
+		min-width: 120px;
+		white-space: nowrap;
+		/* 防止文字换行 */
+		overflow: hidden;
+		/* 超出部分隐藏 */
+		text-overflow: ellipsis;
+		/* 超出部分显示省略号 */
+		font-size: 12px;
+}
+.btn-confirm[data-v-11537e5d],
+	.btn-close[data-v-11537e5d] {
+		padding: 8px 12px;
+		border: 1px solid #ddd;
+		border-radius: 4px;
+		background-color: #f7f7f7;
+		cursor: pointer;
+		line-height: 36px;
+}
+.btn-send[data-v-11537e5d]:disabled {
+		background-color: #ccc;
+		cursor: not-allowed;
+}

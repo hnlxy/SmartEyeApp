@@ -1,33 +1,18 @@
 <template>
-	<div v-html="videoHtml"></div>
+	<div class="video-wrapper">
+		<video class="video-player" :src="videoSrc" controls></video>
+	</div>
 </template>
 
 <script setup>
 	import {
-		ref,
-		computed
+		ref
 	} from 'vue';
-
 	const videoSrc = ref('/static/video.mp4');
-
-	const videoHtml = computed(() => {
-		return `<video autoplay loop muted controls width="100%" direction=90>
-            <source src="${videoSrc.value}" type="video/mp4">
-          </video>`;
-	});
 </script>
 
 <style>
-	.video-replay-page {
-		position: relative;
-		width: 100%;
-		height: 100%;
-	}
-
-	.fullscreen-video {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		/* 确保视频填满整个容器 */
+	.video-wrapper {
+		text-align: center;
 	}
 </style>

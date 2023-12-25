@@ -3,7 +3,7 @@
 		<view class="dates">
 			<view v-for="(dateInfo, index) in dates" :key="index" :class="{ 'selected': index === selectedIndex }"
 				class="date" @click="selectDate(index)">
-				<view>{{ dateInfo.weekday }}</view>
+				<!-- <view>{{ dateInfo.week }}</view> -->
 				<view>{{ dateInfo.day }}</view>
 			</view>
 		</view>
@@ -24,13 +24,11 @@
 
 <script setup>
 	import {
-		ref,
-		watch
+		ref
 	} from 'vue';
 	import {
-		useRoute
-	} from 'vue-router';
-	const route = useRoute();
+		onLoad
+	} from '@dcloudio/uni-app';
 	const actionEvent = ref('');
 	const elderName = ref('');
 	const dates = [];
@@ -48,7 +46,7 @@
 			day: 'numeric'
 		});
 		dates.push({
-			weekday,
+			// week: weekday,
 			day: monthDay
 		});
 	}
@@ -109,13 +107,16 @@
 		}, 500);
 	};
 
-	// watch 监听
-	watch(() => route.query, (newQuery) => {
-		actionEvent.value = newQuery.actionEvent;
-		elderName.value = newQuery.elderName;
+	// 页面加载时接收参数
+	onLoad((options) => {
+		console.log(options)
+		if (options.actionEvent) {
+			actionEvent.value = decodeURIComponent(options.actionEvent);
+		}
+		if (options.elderName) {
+			elderName.value = options.elderName;
+		}
 		getServerData();
-	}, {
-		deep: true //深度监听
 	});
 </script>
 
@@ -150,7 +151,7 @@
 		font-size: 28rpx;
 	}
 
-	.date.selected view:nth-child(2) {
+	.date.selected {
 		background-color: #FFC0CB;
 		border-radius: 25rpx;
 		padding: 10rpx;

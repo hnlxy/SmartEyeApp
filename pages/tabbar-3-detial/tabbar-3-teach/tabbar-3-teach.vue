@@ -10,12 +10,10 @@
     </view>
   </view>
 </template>
+<script setup>
+import { ref } from 'vue';
 
-<script>
-export default {
-  data() {
-    return {
-      videoList: [
+const videoList = ref([
         {
           title: "翻身（叩背）",
           description: "对于不能自行翻身的老人，定期翻身可以预防床疮（压疮）的发生，维护皮肤健康。",
@@ -66,10 +64,7 @@ export default {
 		  description: "保持老人的指甲整洁和舒适，防止指甲太长而导致不适或划伤皮肤。",
 		  filePath: "/static/video/teach/cut_nails.mp4", // 请替换成你的本地视频路径
 		},
-      ],
-    };
-  },
-};
+      ]);
 </script>
 
 <style scoped>

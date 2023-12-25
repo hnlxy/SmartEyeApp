@@ -42,12 +42,12 @@
 			avatar: '../../../static/img/face/face4.png'
 		},
 	]);
-	import {
-		useRouter
-	} from 'vue-router';
-	const router = useRouter();
 	const goToReplay = (item) => {
-		router.push('/pages/tabbar/tabbar-1/video_replay');
+		const url = `/pages/tabbar/tabbar-1/video_replay?item=${item}`
+		console.log(url);
+		uni.navigateTo({
+			url: url
+		})
 	};
 </script>
 

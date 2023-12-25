@@ -13,14 +13,18 @@
 		</view>
 		<view class="row">
 			<uni-section>
-				<uni-card title="血压" @click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血压'})" extra="详细信息" class="xueya"
+				<uni-card title="血压"
+					@click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血压'})"
+					extra="详细信息" class="xueya"
 					style="background-color: #D3D8FF; font-weight: bold; background-image:url('static/img/tabbar/xueya.png');">
 					<text class="uni-body" style="font-size: 25px;">{{ selectedUser.healthData.bloodPressure }}</text>
 				</uni-card>
 			</uni-section>
 
 			<uni-section style="margin-left: -20px;">
-				<uni-card title="血氧" @click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血氧'})" extra="详细信息" class="xueyang"
+				<uni-card title="血氧"
+					@click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血氧'})"
+					extra="详细信息" class="xueyang"
 					style="background-color: #F7DAEC; font-weight: bold; background-image:url('static/img/tabbar/xueyang.png');">
 					<text class="uni-body" style="font-size: 25px;">{{ selectedUser.healthData.bloodOxygen }}</text>
 				</uni-card>
@@ -28,14 +32,18 @@
 		</view>
 		<view class="row">
 			<uni-section style="margin-top: -20px;">
-				<uni-card title="血糖" @click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血糖'})" extra="详细信息" class="xuetang"
+				<uni-card title="血糖"
+					@click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '血糖'})"
+					extra="详细信息" class="xuetang"
 					style="background-color: #F7E8CC; font-weight: bold;background-image:url('static/img/tabbar/xuetang.png');">
 					<text class="uni-body" style="font-size: 25px;">{{ selectedUser.healthData.bloodSugar }}</text>
 				</uni-card>
 			</uni-section>
 
 			<uni-section style="margin-top: -70px; margin-left: -20px; margin-top: -50px;">
-				<uni-card title="心率" @click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '心率'})" extra="详细信息" class="xinlv"
+				<uni-card title="心率"
+					@click="goToPage('/pages/tabbar/tabbar-1/status', {elderName: selectedUser.name, actionEvent: '心率'})"
+					extra="详细信息" class="xinlv"
 					style="background-color: #C4F1F2; font-weight: bold;background-image:url('static/img/tabbar/xinlv.png');">
 					<text class="uni-body" style="font-size: 25px;">{{ selectedUser.healthData.heartRate }}</text>
 				</uni-card>
@@ -50,9 +58,6 @@
 	import {
 		ref
 	} from 'vue';
-	import {
-		useRouter
-	} from 'vue-router'
 	const users = ref([{
 			id: '1',
 			name: 'Thomas',
@@ -90,10 +95,15 @@
 
 	// 当前选中的用户
 	const selectedUser = ref(users.value[0]);
-	const router = useRouter()
-
 	const goToPage = (path, params = {}) => {
-		router.push({path, query: params});
+		const query = Object.entries(params)
+			.map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+			.join('&');
+		const url = `${path}?${query}`;
+		console.log(url);
+		uni.navigateTo({
+			url: url
+		});
 	};
 
 	const switchUser = (event) => {

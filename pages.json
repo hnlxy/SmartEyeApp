@@ -62,71 +62,71 @@
 			}
         },
 		{
-		    "path": "/pages/tabbar/tabbar-1/messages",
+		    "path": "pages/tabbar/tabbar-1/messages",
 			"style": {
 			    "navigationBarTitleText": "消息通知"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-1/status",
+		    "path": "pages/tabbar/tabbar-1/status",
 			"style": {
 			    "navigationBarTitleText": "状态"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/bind_uid",
+		    "path": "pages/tabbar/tabbar-5/bind_uid",
 		    "style": {
 				"navigationBarTitleText": "绑定UID"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/address",
+		    "path": "pages/tabbar/tabbar-5/address",
 		    "style": {
 				"navigationBarTitleText": "地址"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/help",
+		    "path": "pages/tabbar/tabbar-5/help",
 		    "style": {
 				"navigationBarTitleText": "帮助中心"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/setting/language",
+		    "path": "pages/tabbar/tabbar-5/setting/language",
 		    "style": {
 				"navigationBarTitleText": "设置语言"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/setting/support",
+		    "path": "pages/tabbar/tabbar-5/setting/support",
 		    "style": {
 				"navigationBarTitleText": "支持"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/setting/change_PIN",
+		    "path": "pages/tabbar/tabbar-5/setting/change_PIN",
 		    "style": {
 				"navigationBarTitleText": "修改PIN"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/setting/about_us",
+		    "path": "pages/tabbar/tabbar-5/setting/about_us",
 		    "style": {
 				"navigationBarTitleText": "关于我们"
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-3/verify_code",
+		    "path": "pages/tabbar/tabbar-3/verify_code",
 		    "style": {}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-1/video_replay",
+		    "path": "pages/tabbar/tabbar-1/video_replay",
 		    "style": {
 				"navigationBarTitleText": ""
 			}
 		},
 		{
-		    "path": "/pages/tabbar/tabbar-5/setting",
+		    "path": "pages/tabbar/tabbar-5/setting",
 		    "style": {
 				"navigationBarTitleText": "设置"
 			}

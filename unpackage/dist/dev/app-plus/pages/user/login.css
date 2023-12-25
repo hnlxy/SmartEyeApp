@@ -1,0 +1,15 @@
+
+.container {
+		padding: 1.5625rem;
+}
+.uni-form-item {
+		display: flex;
+		justify-content: center;
+}
+.uni-subtitle-text {
+		color: black;
+		font-size: 1.5625rem;
+}
+.subtitle {
+		margin-top: 3.125rem;
+}

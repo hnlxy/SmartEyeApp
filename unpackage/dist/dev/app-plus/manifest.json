@@ -1,0 +1,153 @@
+{
+  "@platforms": [
+    "android",
+    "iPhone",
+    "iPad"
+  ],
+  "id": "__UNI__B4ECEB3",
+  "name": "SmartEyeApp",
+  "version": {
+    "name": "1.0.0",
+    "code": "100"
+  },
+  "description": "",
+  "developer": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "permissions": {
+    "UniNView": {
+      "description": "UniNView原生渲染"
+    }
+  },
+  "plus": {
+    "useragent": {
+      "value": "uni-app",
+      "concatenate": true
+    },
+    "splashscreen": {
+      "target": "id:1",
+      "autoclose": true,
+      "waiting": true,
+      "delay": 0
+    },
+    "popGesture": "close",
+    "launchwebview": {
+      "id": "1",
+      "kernel": "WKWebview"
+    },
+    "usingComponents": true,
+    "compilerVersion": 3,
+    "distribute": {
+      "splashscreen": {
+        "androidStyle": "common"
+      },
+      "google": {
+        "permissions": [
+          "<uses-feature android:name=\"android.hardware.camera\"/>",
+          "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_NETWORK_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+          "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+          "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+          "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+          "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>"
+        ]
+      },
+      "apple": {},
+      "plugins": {
+        "audio": {
+          "mp3": {
+            "description": "Android平台录音支持MP3格式文件"
+          }
+        }
+      }
+    },
+    "statusbar": {
+      "immersed": "supportedDevice",
+      "style": "dark",
+      "background": "#ffbb98"
+    },
+    "allowsInlineMediaPlayback": true,
+    "safearea": {
+      "background": "#ffbb98",
+      "bottom": {
+        "offset": "auto"
+      }
+    },
+    "uni-app": {
+      "control": "uni-v3",
+      "vueVersion": "3",
+      "compilerVersion": "3.98",
+      "nvueCompiler": "uni-app",
+      "renderer": "auto",
+      "nvue": {
+        "flex-direction": "column"
+      },
+      "nvueLaunchMode": "normal",
+      "webView": {
+        "minUserAgentVersion": "49.0"
+      }
+    },
+    "tabBar": {
+      "position": "bottom",
+      "color": "#919ea3",
+      "selectedColor": "#ffffff",
+      "borderStyle": "rgba(255,255,255,0.4)",
+      "blurEffect": "none",
+      "fontSize": "10px",
+      "iconWidth": "45px",
+      "spacing": "3px",
+      "height": "80px",
+      "backgroundColor": "#ffbb98",
+      "iconfontSrc": "static/fonts/iconfont1.ttf",
+      "list": [
+        {
+          "pagePath": "pages/tabbar/tabbar-1/tabbar-1",
+          "text": "",
+          "iconPath": "/static/img/tabbar/index.png",
+          "selectedIconPath": "/static/img/tabbar/index(selected).png"
+        },
+        {
+          "pagePath": "pages/tabbar/tabbar-2/tabbar-2",
+          "text": "",
+          "iconPath": "/static/img/tabbar/arrange.png",
+          "selectedIconPath": "/static/img/tabbar/arrange(selected).png"
+        },
+        {
+          "pagePath": "pages/tabbar/tabbar-3/tabbar-3",
+          "iconPath": "/static/img/tabbar/appliance.png",
+          "selectedIconPath": "/static/img/tabbar/appliance(selected).png"
+        },
+        {
+          "pagePath": "pages/tabbar/tabbar-4/tabbar-4",
+          "text": "",
+          "iconPath": "/static/img/tabbar/contact.png",
+          "selectedIconPath": "/static/img/tabbar/contact(selected).png"
+        },
+        {
+          "pagePath": "pages/tabbar/tabbar-5/tabbar-5",
+          "text": "",
+          "iconPath": "/static/img/tabbar/user.png",
+          "selectedIconPath": "/static/img/tabbar/user(selected).png"
+        }
+      ],
+      "selectedIndex": 0,
+      "shown": true,
+      "child": [
+        "lauchwebview"
+      ],
+      "selected": 0
+    }
+  },
+  "locale": "zh-Hans",
+  "launch_path": "__uniappview.html"
+}

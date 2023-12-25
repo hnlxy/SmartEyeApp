@@ -1,0 +1,35 @@
+
+.notifications-container[data-v-ea114fca] {
+		padding: 16px;
+		background-color: #EBF5F5;
+		height: 100%;
+		overflow-y: auto;
+}
+.notification[data-v-ea114fca] {
+		background-color: #fff;
+		border-radius: 10px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		display: flex;
+		align-items: center;
+		margin-bottom: 16px;
+		padding: 10px;
+}
+.avatar-container[data-v-ea114fca] {
+		padding-right: 16px;
+}
+.avatar[data-v-ea114fca] {
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+}
+.notification-content[data-v-ea114fca] {
+		flex-grow: 1;
+}
+.notification-message[data-v-ea114fca] {
+		font-weight: bold;
+		margin-bottom: 4px;
+}
+.notification-time[data-v-ea114fca] {
+		color: #888;
+		font-size: 0.8em;
+}

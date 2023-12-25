@@ -20,9 +20,6 @@
 	import {
 		ref
 	} from 'vue';
-	import {
-		useRouter
-	} from 'vue-router';
 	const chats = ref([{
 			id: 1,
 			title: "小兰护工",
@@ -46,11 +43,12 @@
 		}
 	]);
 
-	const router = useRouter();
-
 	const openChat = (chatId) => {
 		console.log("打开聊天", chatId);
-		router.push('/pages/chat/chats');
+		const url = `/pages/chat/chats?chatId=${chatId}`;
+		uni.navigateTo({
+			url: url
+		})
 	};
 </script>
 

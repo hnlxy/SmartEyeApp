@@ -30,18 +30,15 @@
 	import {
 		ref
 	} from 'vue';
-	import {
-		useRouter
-	} from 'vue-router';
 	import VerificationModal from './verify_code.vue';
 
-	const router = useRouter();
 	const isFirstClick = ref(true);
 	const isVerified = ref(false);
 	const showVerificationModal = ref(false);
-
 	const goToPage = (path) => {
-		router.push(path);
+		uni.navigateTo({
+			url: path
+		})
 	};
 
 	const handleHomeSeeClick = () => {

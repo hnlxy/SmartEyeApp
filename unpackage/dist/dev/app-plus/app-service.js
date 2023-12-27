@@ -53,7 +53,7 @@ if (uni.restoreGlobal) {
     }
     return target;
   };
-  const _sfc_main$E = {
+  const _sfc_main$D = {
     name: "UniCard",
     emits: ["click"],
     props: {
@@ -114,7 +114,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$o(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "view",
       {
@@ -215,11 +215,11 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$E, [["render", _sfc_render$o], ["__scopeId", "data-v-ae4bee67"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
-  const _sfc_main$D = {
+  const __easycom_0$5 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["render", _sfc_render$m], ["__scopeId", "data-v-ae4bee67"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-card/components/uni-card/uni-card.vue"]]);
+  const _sfc_main$C = {
     __name: "tabbar-1",
     setup(__props) {
-      const users = vue.ref([
+      const elders = [
         {
           id: "1",
           name: "Thomas",
@@ -253,8 +253,9 @@ if (uni.restoreGlobal) {
             heartRate: "72bpm"
           }
         }
-      ]);
-      const selectedUser = vue.ref(users.value[0]);
+      ];
+      const elder = elders.map((e2) => e2.name);
+      const selectedUser = vue.ref(elders[0]);
       const goToPage = (path, params = {}) => {
         const query = Object.entries(params).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join("&");
         const url = `${path}?${query}`;
@@ -264,9 +265,9 @@ if (uni.restoreGlobal) {
         });
       };
       const switchUser = (event) => {
-        const userId = event.target.value;
-        const user = users.value.find((u2) => u2.id === userId);
-        selectedUser.value = user || users.value[0];
+        const selectedIndex = event.detail.value;
+        const selectedElder = elders[selectedIndex];
+        selectedUser.value = selectedElder;
       };
       return (_ctx, _cache) => {
         const _component_uni_card = resolveEasycom(vue.resolveDynamicComponent("uni-card"), __easycom_0$5);
@@ -277,49 +278,32 @@ if (uni.restoreGlobal) {
               class: "head-pic",
               src: selectedUser.value.avatar
             }, null, 8, ["src"]),
-            vue.createElementVNode(
-              "text",
-              { class: "welcome" },
-              vue.toDisplayString(selectedUser.value.name),
-              1
-              /* TEXT */
-            ),
+            vue.createElementVNode("picker", {
+              mode: "selector",
+              range: vue.unref(elder),
+              onChange: switchUser
+            }, [
+              vue.createElementVNode(
+                "view",
+                { class: "welcome" },
+                vue.toDisplayString(selectedUser.value.name),
+                1
+                /* TEXT */
+              )
+            ], 40, ["range"]),
             vue.createElementVNode("image", {
               class: "notice",
               src: "/static/img/tabbar/news.png",
               mode: "aspectFit",
               onClick: _cache[0] || (_cache[0] = ($event) => goToPage("/pages/tabbar/tabbar-1/messages"))
-            }),
-            vue.createElementVNode(
-              "select",
-              {
-                class: "user-select",
-                onChange: _cache[1] || (_cache[1] = ($event) => switchUser($event))
-              },
-              [
-                (vue.openBlock(true), vue.createElementBlock(
-                  vue.Fragment,
-                  null,
-                  vue.renderList(users.value, (user) => {
-                    return vue.openBlock(), vue.createElementBlock("option", {
-                      value: user.id,
-                      key: user.id
-                    }, vue.toDisplayString(user.name), 9, ["value"]);
-                  }),
-                  128
-                  /* KEYED_FRAGMENT */
-                ))
-              ],
-              32
-              /* HYDRATE_EVENTS */
-            )
+            })
           ]),
           vue.createElementVNode("view", { class: "row" }, [
             vue.createVNode(_component_uni_section, null, {
               default: vue.withCtx(() => [
                 vue.createVNode(_component_uni_card, {
                   title: "血压",
-                  onClick: _cache[2] || (_cache[2] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血压" })),
+                  onClick: _cache[1] || (_cache[1] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血压" })),
                   extra: "详细信息",
                   class: "xueya",
                   style: { "background-color": "#D3D8FF", "font-weight": "bold", "background-image": "url('static/img/tabbar/xueya.png')" }
@@ -347,7 +331,7 @@ if (uni.restoreGlobal) {
               default: vue.withCtx(() => [
                 vue.createVNode(_component_uni_card, {
                   title: "血氧",
-                  onClick: _cache[3] || (_cache[3] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血氧" })),
+                  onClick: _cache[2] || (_cache[2] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血氧" })),
                   extra: "详细信息",
                   class: "xueyang",
                   style: { "background-color": "#F7DAEC", "font-weight": "bold", "background-image": "url('static/img/tabbar/xueyang.png')" }
@@ -377,7 +361,7 @@ if (uni.restoreGlobal) {
               default: vue.withCtx(() => [
                 vue.createVNode(_component_uni_card, {
                   title: "血糖",
-                  onClick: _cache[4] || (_cache[4] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血糖" })),
+                  onClick: _cache[3] || (_cache[3] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "血糖" })),
                   extra: "详细信息",
                   class: "xuetang",
                   style: { "background-color": "#F7E8CC", "font-weight": "bold", "background-image": "url('static/img/tabbar/xuetang.png')" }
@@ -405,7 +389,7 @@ if (uni.restoreGlobal) {
               default: vue.withCtx(() => [
                 vue.createVNode(_component_uni_card, {
                   title: "心率",
-                  onClick: _cache[5] || (_cache[5] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "心率" })),
+                  onClick: _cache[4] || (_cache[4] = ($event) => goToPage("/pages/tabbar/tabbar-1/status", { elderName: selectedUser.value.name, actionEvent: "心率" })),
                   extra: "详细信息",
                   class: "xinlv",
                   style: { "background-color": "#C4F1F2", "font-weight": "bold", "background-image": "url('static/img/tabbar/xinlv.png')" }
@@ -439,8 +423,8 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar1Tabbar1 = /* @__PURE__ */ _export_sfc(_sfc_main$D, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/tabbar-1.vue"]]);
-  const _sfc_main$C = {
+  const PagesTabbarTabbar1Tabbar1 = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/tabbar-1.vue"]]);
+  const _sfc_main$B = {
     data() {
       return {};
     },
@@ -452,7 +436,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$n(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-container" }, [
       vue.createElementVNode("view", { class: "body" }, [
         vue.createElementVNode("view", { class: "uni-title title" }, [
@@ -473,168 +457,132 @@ if (uni.restoreGlobal) {
       ])
     ]);
   }
-  const PagesUserLoginOrRegister = /* @__PURE__ */ _export_sfc(_sfc_main$C, [["render", _sfc_render$n], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/login-or-register.vue"]]);
-  const _sfc_main$B = {
+  const PagesUserLoginOrRegister = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["render", _sfc_render$l], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/login-or-register.vue"]]);
+  const _sfc_main$A = {
     __name: "tabbar-2",
     setup(__props) {
-      const goToReplay = (item) => {
-        const url = `/pages/tabbar/tabbar-1/video_replay?item=${item}`;
-        formatAppLog("log", "at pages/tabbar/tabbar-2/tabbar-2.vue:45", url);
-        uni.navigateTo({
-          url
-        });
-      };
-      const tabEvents = {
-        tab1: [
-          {
-            id: 1,
-            name: "张三",
-            time: "2023-12-02 10:30",
-            avatar: "../../../static/img/face/face2.png"
-          },
-          {
-            id: 2,
-            name: "李四",
-            time: "2023-12-17 16:30",
-            avatar: "../../../static/img/face/face3.png"
-          }
-        ],
-        tab2: [
-          {
-            id: 1,
-            name: "王五",
-            time: "2023-12-02 10:30",
-            avatar: "../../../static/img/face/face4.png"
-          },
-          {
-            id: 2,
-            name: "赵六",
-            time: "2023-12-17 16:30",
-            avatar: "../../../static/img/face/face5.png"
-          }
-        ],
-        tab3: [
-          {
-            id: 1,
-            name: "孙七",
-            time: "2023-12-02 10:30",
-            avatar: "../../../static/img/face/face6.png"
-          },
-          {
-            id: 2,
-            name: "王八",
-            time: "2023-12-17 16:30",
-            avatar: "../../../static/img/face/face7.png"
-          }
-        ]
-      };
-      const tabStats = {
-        tab1: {
-          weekly: 10,
-          monthly: 40
-        },
-        tab2: {
-          weekly: 5,
-          monthly: 20
-        },
-        tab3: {
-          weekly: 20,
-          monthly: 80
-        }
-      };
-      const tabs = vue.reactive([
+      const activities = ["测体温", "翻身", "换尿不湿", "换衣服", "喂水", "喂饭", "喂药", "排尿排便", "洗脚", "剪指甲"];
+      const selectedActivity = vue.ref("翻身");
+      const notifications = vue.ref([
         {
-          label: "翻身",
-          value: "tab1"
+          id: 1,
+          name: "张三",
+          time: "2023-12-02 10:30",
+          avatar: "../../../static/img/face/face2.png",
+          activities: {
+            "测体温": 2,
+            "翻身": 5,
+            "换尿不湿": 3,
+            "换衣服": 1,
+            "喂水": 2,
+            "喂饭": 4,
+            "喂药": 1,
+            "排尿排便": 3,
+            "洗脚": 2,
+            "剪指甲": 3
+          }
         },
         {
-          label: "喝水",
-          value: "tab2"
+          id: 2,
+          name: "李四",
+          time: "2023-12-02 10:30",
+          avatar: "../../../static/img/face/face3.png",
+          activities: {
+            "测体温": 1,
+            "翻身": 2,
+            "换尿不湿": 4,
+            "换衣服": 2,
+            "喂水": 3,
+            "喂饭": 5,
+            "喂药": 2,
+            "排尿排便": 1,
+            "洗脚": 4,
+            "剪指甲": 2
+          }
         },
         {
-          label: "穿衣",
-          value: "tab3"
+          id: 3,
+          name: "王五",
+          time: "2023-12-02 10:30",
+          avatar: "../../../static/img/face/face4.png",
+          activities: {
+            "测体温": 3,
+            "翻身": 1,
+            "换尿不湿": 1,
+            "换衣服": 3,
+            "喂水": 1,
+            "喂饭": 2,
+            "喂药": 3,
+            "排尿排便": 2,
+            "洗脚": 1,
+            "剪指甲": 4
+          }
         }
       ]);
-      const currentTabEvents = vue.computed(() => {
-        return tabEvents[currentTab.value] || [];
+      const selectedCount = vue.computed(() => {
+        if (!selectedActivity.value)
+          return 0;
+        return notifications.value.reduce((sum, item) => sum + (item.activities[selectedActivity.value] || 0), 0);
       });
-      const currentTab = vue.ref(tabs[0].value);
-      const currentStats = vue.computed(() => {
-        return tabStats[currentTab.value];
-      });
-      function switchTab(index) {
-        currentTab.value = tabs[index].value;
-      }
+      const getActivityCountForPerson = (person) => {
+        return person.activities[selectedActivity.value] || 0;
+      };
+      const onActivityChange = (event) => {
+        const activity = activities[event.detail.value];
+        selectedActivity.value = activity;
+      };
       return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createElementBlock("view", { class: "app" }, [
-          vue.createCommentVNode(" 统计区域 "),
-          vue.createElementVNode("view", { class: "stats" }, [
-            vue.createCommentVNode(" 动态显示当前选中的 Tab 统计信息 "),
-            vue.createElementVNode("view", { class: "stat-item" }, [
-              vue.createElementVNode("view", { class: "stat-key" }, "本周总次数"),
+        return vue.openBlock(), vue.createElementBlock("view", { class: "container" }, [
+          vue.createElementVNode("view", { class: "selectact" }, "选择活动"),
+          vue.createElementVNode(
+            "picker",
+            {
+              mode: "selector",
+              range: activities,
+              onChange: onActivityChange
+            },
+            [
               vue.createElementVNode(
                 "view",
-                { class: "stat-value" },
-                vue.toDisplayString(vue.unref(currentStats).weekly),
+                { class: "picker" },
+                " 当前选择：" + vue.toDisplayString(selectedActivity.value),
                 1
                 /* TEXT */
               )
-            ]),
-            vue.createElementVNode("view", { class: "stat-item" }, [
-              vue.createElementVNode("view", { class: "stat-key" }, "本月总次数"),
-              vue.createElementVNode(
-                "view",
-                { class: "stat-value" },
-                vue.toDisplayString(vue.unref(currentStats).monthly),
-                1
-                /* TEXT */
-              )
-            ])
-          ]),
-          vue.createCommentVNode(" Tab 切换区域 "),
-          vue.createElementVNode("view", { class: "tabs" }, [
+            ],
+            32
+            /* HYDRATE_EVENTS */
+          ),
+          vue.createCommentVNode(" 分界 "),
+          vue.createElementVNode("view", { class: "divider" }),
+          vue.createElementVNode("view", { class: "notifications-container" }, [
             (vue.openBlock(true), vue.createElementBlock(
               vue.Fragment,
               null,
-              vue.renderList(tabs, (tab, index) => {
+              vue.renderList(notifications.value, (item) => {
                 return vue.openBlock(), vue.createElementBlock("view", {
-                  class: vue.normalizeClass(["tab-item", { active: currentTab.value === tabs[index].value }]),
-                  key: index,
-                  onClick: ($event) => switchTab(index)
-                }, vue.toDisplayString(tab.label), 11, ["onClick"]);
-              }),
-              128
-              /* KEYED_FRAGMENT */
-            ))
-          ]),
-          vue.createCommentVNode(" 当前 Tab 内容区域 "),
-          vue.createElementVNode("view", { class: "tab-content" }, [
-            (vue.openBlock(true), vue.createElementBlock(
-              vue.Fragment,
-              null,
-              vue.renderList(vue.unref(currentTabEvents), (event) => {
-                return vue.openBlock(), vue.createElementBlock("view", {
-                  class: "event-item",
-                  key: event.id,
-                  onClick: _cache[0] || (_cache[0] = ($event) => goToReplay(_ctx.item))
+                  class: "notification",
+                  key: item.id
                 }, [
-                  vue.createElementVNode("image", {
-                    src: event.avatar,
-                    class: "avatar"
-                  }, null, 8, ["src"]),
-                  vue.createElementVNode("view", { class: "event-info" }, [
+                  vue.createElementVNode("view", { class: "avatar-container" }, [
+                    vue.createElementVNode("image", {
+                      src: item.avatar,
+                      class: "avatar",
+                      alt: "avatar"
+                    }, null, 8, ["src"])
+                  ]),
+                  vue.createElementVNode("view", { class: "notification-content" }, [
                     vue.createElementVNode(
                       "view",
-                      { class: "event-name" },
-                      vue.toDisplayString(event.name),
+                      { class: "notification-message" },
+                      vue.toDisplayString(item.name) + " - " + vue.toDisplayString(getActivityCountForPerson(item)) + "次",
                       1
                       /* TEXT */
                     ),
                     vue.createElementVNode(
                       "view",
-                      { class: "event-time" },
-                      vue.toDisplayString(event.time),
+                      { class: "notification-time" },
+                      vue.toDisplayString(item.time),
                       1
                       /* TEXT */
                     )
@@ -644,13 +592,22 @@ if (uni.restoreGlobal) {
               128
               /* KEYED_FRAGMENT */
             ))
+          ]),
+          vue.createElementVNode("view", { class: "info" }, [
+            selectedActivity.value ? (vue.openBlock(), vue.createElementBlock(
+              "text",
+              { key: 0 },
+              "「" + vue.toDisplayString(selectedActivity.value) + "」的统计总次数是：" + vue.toDisplayString(vue.unref(selectedCount)),
+              1
+              /* TEXT */
+            )) : (vue.openBlock(), vue.createElementBlock("text", { key: 1 }, "请选择一个活动"))
           ])
         ]);
       };
     }
   };
-  const PagesTabbarTabbar2Tabbar2 = /* @__PURE__ */ _export_sfc(_sfc_main$B, [["__scopeId", "data-v-f8aa9678"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-2/tabbar-2.vue"]]);
-  const _sfc_main$A = {
+  const PagesTabbarTabbar2Tabbar2 = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-2/tabbar-2.vue"]]);
+  const _sfc_main$z = {
     __name: "verify_code",
     emits: ["close", "verify-success"],
     setup(__props, { emit }) {
@@ -715,8 +672,8 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar3Verify_code = /* @__PURE__ */ _export_sfc(_sfc_main$A, [["__scopeId", "data-v-11537e5d"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-3/verify_code.vue"]]);
-  const _sfc_main$z = {
+  const PagesTabbarTabbar3Verify_code = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["__scopeId", "data-v-11537e5d"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-3/verify_code.vue"]]);
+  const _sfc_main$y = {
     __name: "tabbar-3",
     setup(__props) {
       const isFirstClick = vue.ref(true);
@@ -808,7 +765,7 @@ if (uni.restoreGlobal) {
       };
     }
   };
-  const PagesTabbarTabbar3Tabbar3 = /* @__PURE__ */ _export_sfc(_sfc_main$z, [["__scopeId", "data-v-afdd7fb7"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-3/tabbar-3.vue"]]);
+  const PagesTabbarTabbar3Tabbar3 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["__scopeId", "data-v-afdd7fb7"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-3/tabbar-3.vue"]]);
   const icons = {
     "id": "2852637",
     "name": "uniui图标库",
@@ -1984,7 +1941,7 @@ if (uni.restoreGlobal) {
     const reg = /^[0-9]*$/g;
     return typeof val === "number" || reg.test(val) ? val + "px" : val;
   };
-  const _sfc_main$y = {
+  const _sfc_main$x = {
     name: "UniIcons",
     emits: ["click"],
     props: {
@@ -2028,7 +1985,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$m(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock(
       "text",
       {
@@ -2041,7 +1998,7 @@ if (uni.restoreGlobal) {
       /* CLASS, STYLE */
     );
   }
-  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$y, [["render", _sfc_render$m], ["__scopeId", "data-v-d31e1c47"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
+  const __easycom_0$4 = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$k], ["__scopeId", "data-v-d31e1c47"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-icons/components/uni-icons/uni-icons.vue"]]);
   const isObject = (val) => val !== null && typeof val === "object";
   const defaultDelimiters = ["{", "}"];
   class BaseFormatter {
@@ -2346,7 +2303,7 @@ if (uni.restoreGlobal) {
   const {
     t: t$1
   } = initVueI18n(messages);
-  const _sfc_main$x = {
+  const _sfc_main$w = {
     name: "UniSearchBar",
     emits: ["input", "update:modelValue", "clear", "cancel", "confirm", "blur", "focus"],
     props: {
@@ -2484,7 +2441,7 @@ if (uni.restoreGlobal) {
       }
     }
   };
-  function _sfc_render$l(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-searchbar" }, [
       vue.createElementVNode(
@@ -2559,7 +2516,7 @@ if (uni.restoreGlobal) {
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$x, [["render", _sfc_render$l], ["__scopeId", "data-v-f07ef577"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
+  const __easycom_0$3 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$j], ["__scopeId", "data-v-f07ef577"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-search-bar/components/uni-search-bar/uni-search-bar.vue"]]);
   const pages = [
     {
       path: "pages/tabbar/tabbar-1/tabbar-1",
@@ -2636,12 +2593,6 @@ if (uni.restoreGlobal) {
       path: "pages/tabbar/tabbar-5/bind_uid",
       style: {
         navigationBarTitleText: "绑定UID"
-      }
-    },
-    {
-      path: "pages/tabbar/tabbar-5/address",
-      style: {
-        navigationBarTitleText: "地址"
       }
     },
     {
@@ -5434,7 +5385,7 @@ ${i3}
   })();
   var Bs = $s;
   const avatarWidth = 45;
-  const _sfc_main$w = {
+  const _sfc_main$v = {
     name: "UniListChat",
     emits: ["click"],
     props: {
@@ -5617,7 +5568,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$k(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", {
       "hover-class": !$props.clickable && !$props.link ? "" : "uni-list-chat--hover",
       class: "uni-list-chat",
@@ -5762,8 +5713,8 @@ ${i3}
       ])
     ], 8, ["hover-class"]);
   }
-  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$w, [["render", _sfc_render$k], ["__scopeId", "data-v-20df4ef0"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
-  const _sfc_main$v = {
+  const __easycom_1$3 = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$i], ["__scopeId", "data-v-20df4ef0"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list-chat/uni-list-chat.vue"]]);
+  const _sfc_main$u = {
     name: "uniList",
     "mp-weixin": {
       options: {
@@ -5809,7 +5760,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$j(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-list uni-border-top-bottom" }, [
       $props.border ? (vue.openBlock(), vue.createElementBlock("view", {
         key: 0,
@@ -5822,8 +5773,8 @@ ${i3}
       })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$v, [["render", _sfc_render$j], ["__scopeId", "data-v-c2f1266a"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
-  const _sfc_main$u = {
+  const __easycom_1$2 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["render", _sfc_render$h], ["__scopeId", "data-v-c2f1266a"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list/uni-list.vue"]]);
+  const _sfc_main$t = {
     __name: "tabbar-4",
     setup(__props) {
       const chats = vue.ref([
@@ -5915,8 +5866,8 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar4Tabbar4 = /* @__PURE__ */ _export_sfc(_sfc_main$u, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-4/tabbar-4.vue"]]);
-  const _sfc_main$t = {
+  const PagesTabbarTabbar4Tabbar4 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-4/tabbar-4.vue"]]);
+  const _sfc_main$s = {
     name: "UniBadge",
     emits: ["click"],
     props: {
@@ -6039,7 +5990,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$i(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "uni-badge--x" }, [
       vue.renderSlot(_ctx.$slots, "default", {}, void 0, true),
       $props.text ? (vue.openBlock(), vue.createElementBlock(
@@ -6056,8 +6007,8 @@ ${i3}
       )) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$t, [["render", _sfc_render$i], ["__scopeId", "data-v-c97cb896"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
-  const _sfc_main$s = {
+  const __easycom_1$1 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$g], ["__scopeId", "data-v-c97cb896"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-badge/components/uni-badge/uni-badge.vue"]]);
+  const _sfc_main$r = {
     name: "UniListItem",
     emits: ["click", "switchChange"],
     props: {
@@ -6294,7 +6245,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$h(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_icons = resolveEasycom(vue.resolveDynamicComponent("uni-icons"), __easycom_0$4);
     const _component_uni_badge = resolveEasycom(vue.resolveDynamicComponent("uni-badge"), __easycom_1$1);
     return vue.openBlock(), vue.createElementBlock("view", {
@@ -6423,8 +6374,8 @@ ${i3}
       })) : vue.createCommentVNode("v-if", true)
     ], 14, ["hover-class"]);
   }
-  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$s, [["render", _sfc_render$h], ["__scopeId", "data-v-c7524739"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
-  const _sfc_main$r = {
+  const __easycom_0$2 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["render", _sfc_render$f], ["__scopeId", "data-v-c7524739"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/uni-list/components/uni-list-item/uni-list-item.vue"]]);
+  const _sfc_main$q = {
     __name: "tabbar-5",
     setup(__props) {
       const goToPage = (path) => {
@@ -6481,18 +6432,7 @@ ${i3}
                   }),
                   vue.createVNode(_component_uni_list_item, {
                     clickable: "",
-                    onClick: _cache[2] || (_cache[2] = ($event) => goToPage("/pages/tabbar/tabbar-5/address")),
-                    style: { "width": "100vw", "height": "20vw" },
-                    title: "地址",
-                    note: "",
-                    showArrow: "",
-                    thumb: "../../../static/img/user/address.png",
-                    "thumb-size": "sm",
-                    rightText: ""
-                  }),
-                  vue.createVNode(_component_uni_list_item, {
-                    clickable: "",
-                    onClick: _cache[3] || (_cache[3] = ($event) => goToPage("/pages/tabbar/tabbar-5/help")),
+                    onClick: _cache[2] || (_cache[2] = ($event) => goToPage("/pages/tabbar/tabbar-5/help")),
                     style: { "width": "100vw", "height": "20vw" },
                     title: "帮助与反馈",
                     note: "",
@@ -6503,7 +6443,7 @@ ${i3}
                   }),
                   vue.createVNode(_component_uni_list_item, {
                     clickable: "",
-                    onClick: _cache[4] || (_cache[4] = ($event) => goToPage("/pages/tabbar/tabbar-5/setting")),
+                    onClick: _cache[3] || (_cache[3] = ($event) => goToPage("/pages/tabbar/tabbar-5/setting")),
                     style: { "width": "100vw", "height": "20vw" },
                     title: "设置",
                     note: "",
@@ -6523,22 +6463,66 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Tabbar5 = /* @__PURE__ */ _export_sfc(_sfc_main$r, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/tabbar-5.vue"]]);
-  const _sfc_main$q = {
-    data() {
-      return {
-        title: "Hello"
-      };
-    },
-    onLoad() {
-    },
-    methods: {}
-  };
-  function _sfc_render$g(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, " 页面 - 发图文 ");
-  }
-  const PagesTabbar3DetialTabbar3ReportTabbar3Report = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["render", _sfc_render$g], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report.vue"]]);
+  const PagesTabbarTabbar5Tabbar5 = /* @__PURE__ */ _export_sfc(_sfc_main$q, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/tabbar-5.vue"]]);
   const _sfc_main$p = {
+    __name: "tabbar-3-report",
+    setup(__props) {
+      const dates = [];
+      const selectedIndex = vue.ref(6);
+      for (let i2 = 6; i2 >= 0; i2--) {
+        let day = /* @__PURE__ */ new Date();
+        day.setDate(day.getDate() - i2);
+        const monthDay = day.toLocaleDateString("en-US", {
+          month: "numeric",
+          day: "numeric"
+        });
+        dates.push({
+          day: monthDay
+        });
+      }
+      const selectDate = (index) => {
+        selectedIndex.value = index;
+      };
+      return (_ctx, _cache) => {
+        return vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          [
+            vue.createElementVNode("view", { class: "calendar" }, [
+              vue.createElementVNode("view", { class: "dates" }, [
+                (vue.openBlock(), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList(dates, (dateInfo, index) => {
+                    return vue.createElementVNode("view", {
+                      key: index,
+                      class: vue.normalizeClass([{ "selected": index === selectedIndex.value }, "date"]),
+                      onClick: ($event) => selectDate(index)
+                    }, [
+                      vue.createElementVNode(
+                        "view",
+                        null,
+                        vue.toDisplayString(dateInfo.day),
+                        1
+                        /* TEXT */
+                      )
+                    ], 10, ["onClick"]);
+                  }),
+                  64
+                  /* STABLE_FRAGMENT */
+                ))
+              ])
+            ]),
+            vue.createElementVNode("view", { class: "divider" })
+          ],
+          64
+          /* STABLE_FRAGMENT */
+        );
+      };
+    }
+  };
+  const PagesTabbar3DetialTabbar3ReportTabbar3Report = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-report/tabbar-3-report.vue"]]);
+  const _sfc_main$o = {
     data() {
       return {
         title: "Hello"
@@ -6548,11 +6532,11 @@ ${i3}
     },
     methods: {}
   };
-  function _sfc_render$f(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "content" }, " 页面 - 发视频 ");
   }
-  const PagesTabbar3DetialTabbar3RecordTabbar3Record = /* @__PURE__ */ _export_sfc(_sfc_main$p, [["render", _sfc_render$f], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record.vue"]]);
-  const _sfc_main$o = {
+  const PagesTabbar3DetialTabbar3RecordTabbar3Record = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["render", _sfc_render$e], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-record/tabbar-3-record.vue"]]);
+  const _sfc_main$n = {
     __name: "tabbar-3-teach",
     setup(__props) {
       const videoList = vue.ref([
@@ -6657,8 +6641,8 @@ ${i3}
       };
     }
   };
-  const PagesTabbar3DetialTabbar3TeachTabbar3Teach = /* @__PURE__ */ _export_sfc(_sfc_main$o, [["__scopeId", "data-v-e1539014"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach.vue"]]);
-  const _sfc_main$n = {
+  const PagesTabbar3DetialTabbar3TeachTabbar3Teach = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["__scopeId", "data-v-e1539014"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-teach/tabbar-3-teach.vue"]]);
+  const _sfc_main$m = {
     setup() {
       const videoPlayer = vue.ref(null);
       const state = vue.reactive({
@@ -6686,7 +6670,7 @@ ${i3}
       };
     }
   };
-  function _sfc_render$e(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_uni_card = resolveEasycom(vue.resolveDynamicComponent("uni-card"), __easycom_0$5);
     const _component_uni_section = vue.resolveComponent("uni-section");
     return vue.openBlock(), vue.createElementBlock(
@@ -6760,8 +6744,8 @@ ${i3}
       /* STABLE_FRAGMENT */
     );
   }
-  const PagesTabbar3DetialTabbar3SeeTabbar3See = /* @__PURE__ */ _export_sfc(_sfc_main$n, [["render", _sfc_render$e], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see.vue"]]);
-  const _sfc_main$m = {
+  const PagesTabbar3DetialTabbar3SeeTabbar3See = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["render", _sfc_render$d], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar-3-detial/tabbar-3-see/tabbar-3-see.vue"]]);
+  const _sfc_main$l = {
     __name: "messages",
     setup(__props) {
       const notifications = vue.ref([
@@ -6840,14 +6824,14 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Messages = /* @__PURE__ */ _export_sfc(_sfc_main$m, [["__scopeId", "data-v-ea114fca"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/messages.vue"]]);
-  const _sfc_main$l = {
+  const PagesTabbarTabbar1Messages = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["__scopeId", "data-v-ea114fca"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/messages.vue"]]);
+  const _sfc_main$k = {
     name: "loading1",
     data() {
       return {};
     }
   };
-  function _sfc_render$d(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading1" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -6855,14 +6839,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$l, [["render", _sfc_render$d], ["__scopeId", "data-v-0e645258"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
-  const _sfc_main$k = {
+  const Loading1 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$c], ["__scopeId", "data-v-0e645258"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading1.vue"]]);
+  const _sfc_main$j = {
     name: "loading2",
     data() {
       return {};
     }
   };
-  function _sfc_render$c(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading2" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -6870,14 +6854,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$k, [["render", _sfc_render$c], ["__scopeId", "data-v-3df48dc2"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
-  const _sfc_main$j = {
+  const Loading2 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$b], ["__scopeId", "data-v-3df48dc2"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading2.vue"]]);
+  const _sfc_main$i = {
     name: "loading3",
     data() {
       return {};
     }
   };
-  function _sfc_render$b(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading3" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -6885,14 +6869,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$j, [["render", _sfc_render$b], ["__scopeId", "data-v-27a8293c"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
-  const _sfc_main$i = {
+  const Loading3 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$a], ["__scopeId", "data-v-27a8293c"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading3.vue"]]);
+  const _sfc_main$h = {
     name: "loading5",
     data() {
       return {};
     }
   };
-  function _sfc_render$a(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading5" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -6900,14 +6884,14 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$i, [["render", _sfc_render$a], ["__scopeId", "data-v-2e7deb83"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
-  const _sfc_main$h = {
+  const Loading4 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$9], ["__scopeId", "data-v-2e7deb83"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading4.vue"]]);
+  const _sfc_main$g = {
     name: "loading6",
     data() {
       return {};
     }
   };
-  function _sfc_render$9(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "container loading6" }, [
       vue.createElementVNode("view", { class: "shape shape1" }),
       vue.createElementVNode("view", { class: "shape shape2" }),
@@ -6915,8 +6899,8 @@ ${i3}
       vue.createElementVNode("view", { class: "shape shape4" })
     ]);
   }
-  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$h, [["render", _sfc_render$9], ["__scopeId", "data-v-ef674bbb"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
-  const _sfc_main$g = {
+  const Loading5 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$8], ["__scopeId", "data-v-ef674bbb"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/loading5.vue"]]);
+  const _sfc_main$f = {
     components: { Loading1, Loading2, Loading3, Loading4, Loading5 },
     name: "qiun-loading",
     props: {
@@ -6929,7 +6913,7 @@ ${i3}
       return {};
     }
   };
-  function _sfc_render$8(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_Loading1 = vue.resolveComponent("Loading1");
     const _component_Loading2 = vue.resolveComponent("Loading2");
     const _component_Loading3 = vue.resolveComponent("Loading3");
@@ -6943,8 +6927,8 @@ ${i3}
       $props.loadingType == 5 ? (vue.openBlock(), vue.createBlock(_component_Loading5, { key: 4 })) : vue.createCommentVNode("v-if", true)
     ]);
   }
-  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$g, [["render", _sfc_render$8], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
-  const _sfc_main$f = {
+  const __easycom_0$1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$7], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-loading/qiun-loading.vue"]]);
+  const _sfc_main$e = {
     name: "qiun-error",
     props: {
       errorMessage: {
@@ -6956,7 +6940,7 @@ ${i3}
       return {};
     }
   };
-  function _sfc_render$7(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
     return vue.openBlock(), vue.createElementBlock("view", { class: "chartsview" }, [
       vue.createElementVNode("view", { class: "charts-error" }),
       vue.createElementVNode(
@@ -6968,7 +6952,7 @@ ${i3}
       )
     ]);
   }
-  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$f, [["render", _sfc_render$7], ["__scopeId", "data-v-a99d579b"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
+  const __easycom_1 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$6], ["__scopeId", "data-v-a99d579b"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-error/qiun-error.vue"]]);
   const color$1 = ["#1890FF", "#91CB74", "#FAC858", "#EE6666", "#73C0DE", "#3CA272", "#FC8452", "#9A60B4", "#ea7ccc"];
   const formatDateTime = (timeStamp, returnType) => {
     var date = /* @__PURE__ */ new Date();
@@ -7984,7 +7968,7 @@ ${i3}
     var currentdate = year + seperator + month + seperator + strDate;
     return currentdate;
   }
-  const _sfc_main$e = {
+  const _sfc_main$d = {
     name: "qiun-data-charts",
     mixins: [Bs.mixinDatacom],
     props: {
@@ -8690,7 +8674,7 @@ ${i3}
       }
     }
   };
-  function _sfc_render$6(_ctx, _cache, $props, $setup, $data, $options) {
+  function _sfc_render$5(_ctx, _cache, $props, $setup, $data, $options) {
     const _component_qiun_loading = resolveEasycom(vue.resolveDynamicComponent("qiun-loading"), __easycom_0$1);
     const _component_qiun_error = resolveEasycom(vue.resolveDynamicComponent("qiun-error"), __easycom_1);
     return vue.openBlock(), vue.createElementBlock("view", {
@@ -8748,9 +8732,9 @@ ${i3}
     ], 8, ["id"]);
   }
   if (typeof block0 === "function")
-    block0(_sfc_main$e);
-  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$e, [["render", _sfc_render$6], ["__scopeId", "data-v-0ca34aee"], ["__file", "E:/code/qianduan/model/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
-  const _sfc_main$d = {
+    block0(_sfc_main$d);
+  const __easycom_0 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["render", _sfc_render$5], ["__scopeId", "data-v-0ca34aee"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/uni_modules/qiun-data-charts/components/qiun-data-charts/qiun-data-charts.vue"]]);
+  const _sfc_main$c = {
     __name: "status",
     setup(__props) {
       const actionEvent = vue.ref("");
@@ -8760,15 +8744,11 @@ ${i3}
       for (let i2 = 6; i2 >= 0; i2--) {
         let day = /* @__PURE__ */ new Date();
         day.setDate(day.getDate() - i2);
-        day.toLocaleDateString("en-US", {
-          weekday: "short"
-        });
         const monthDay = day.toLocaleDateString("en-US", {
           month: "numeric",
           day: "numeric"
         });
         dates.push({
-          // week: weekday,
           day: monthDay
         });
       }
@@ -8824,7 +8804,7 @@ ${i3}
         }, 500);
       };
       onLoad((options) => {
-        formatAppLog("log", "at pages/tabbar/tabbar-1/status.vue:112", options);
+        formatAppLog("log", "at pages/tabbar/tabbar-1/status.vue:107", options);
         if (options.actionEvent) {
           actionEvent.value = decodeURIComponent(options.actionEvent);
         }
@@ -8850,7 +8830,6 @@ ${i3}
                       class: vue.normalizeClass([{ "selected": index === selectedIndex.value }, "date"]),
                       onClick: ($event) => selectDate(index)
                     }, [
-                      vue.createCommentVNode(" <view>{{ dateInfo.week }}</view> "),
                       vue.createElementVNode(
                         "view",
                         null,
@@ -8896,8 +8875,8 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Status = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-023e833e"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/status.vue"]]);
-  const _sfc_main$c = {
+  const PagesTabbarTabbar1Status = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-023e833e"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/status.vue"]]);
+  const _sfc_main$b = {
     __name: "bind_uid",
     setup(__props) {
       const phoneNumber = vue.ref("");
@@ -8985,12 +8964,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Bind_uid = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/bind_uid.vue"]]);
-  const _sfc_main$b = {};
-  function _sfc_render$5(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", null, "address");
-  }
-  const PagesTabbarTabbar5Address = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["render", _sfc_render$5], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/address.vue"]]);
+  const PagesTabbarTabbar5Bind_uid = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/bind_uid.vue"]]);
   const _sfc_main$a = {
     methods: {
       openFeedback() {
@@ -9083,27 +9057,27 @@ ${i3}
       ])
     ]);
   }
-  const PagesTabbarTabbar5Help = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$4], ["__scopeId", "data-v-8e52639b"], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/help.vue"]]);
+  const PagesTabbarTabbar5Help = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["render", _sfc_render$4], ["__scopeId", "data-v-8e52639b"], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/help.vue"]]);
   const _sfc_main$9 = {};
   function _sfc_render$3(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "设置语言");
   }
-  const PagesTabbarTabbar5SettingLanguage = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$3], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/language.vue"]]);
+  const PagesTabbarTabbar5SettingLanguage = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["render", _sfc_render$3], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/language.vue"]]);
   const _sfc_main$8 = {};
   function _sfc_render$2(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "支持");
   }
-  const PagesTabbarTabbar5SettingSupport = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$2], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/support.vue"]]);
+  const PagesTabbarTabbar5SettingSupport = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["render", _sfc_render$2], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/support.vue"]]);
   const _sfc_main$7 = {};
   function _sfc_render$1(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, "更改pin");
   }
-  const PagesTabbarTabbar5SettingChange_PIN = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$1], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/change_PIN.vue"]]);
+  const PagesTabbarTabbar5SettingChange_PIN = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["render", _sfc_render$1], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/change_PIN.vue"]]);
   const _sfc_main$6 = {};
   function _sfc_render(_ctx, _cache) {
     return null;
   }
-  const PagesTabbarTabbar5SettingAbout_us = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render], ["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting/about_us.vue"]]);
+  const PagesTabbarTabbar5SettingAbout_us = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["render", _sfc_render], ["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting/about_us.vue"]]);
   const _sfc_main$5 = {
     __name: "video_replay",
     setup(__props) {
@@ -9119,7 +9093,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar1Video_replay = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-1/video_replay.vue"]]);
+  const PagesTabbarTabbar1Video_replay = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-1/video_replay.vue"]]);
   const _sfc_main$4 = {
     __name: "setting",
     setup(__props) {
@@ -9248,7 +9222,7 @@ ${i3}
       };
     }
   };
-  const PagesTabbarTabbar5Setting = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/tabbar/tabbar-5/setting.vue"]]);
+  const PagesTabbarTabbar5Setting = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/tabbar/tabbar-5/setting.vue"]]);
   const _sfc_main$3 = {
     __name: "chats",
     setup(__props) {
@@ -9346,7 +9320,7 @@ ${i3}
       };
     }
   };
-  const PagesChatChats = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/chat/chats.vue"]]);
+  const PagesChatChats = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/chat/chats.vue"]]);
   const _sfc_main$2 = {
     __name: "register",
     setup(__props) {
@@ -9430,7 +9404,7 @@ ${i3}
       };
     }
   };
-  const PagesUserRegister = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/register.vue"]]);
+  const PagesUserRegister = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/register.vue"]]);
   const _sfc_main$1 = {
     __name: "login",
     setup(__props) {
@@ -9485,7 +9459,7 @@ ${i3}
       };
     }
   };
-  const PagesUserLogin = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__file", "E:/code/qianduan/model/SmartEyeApp/pages/user/login.vue"]]);
+  const PagesUserLogin = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/pages/user/login.vue"]]);
   __definePage("pages/tabbar/tabbar-1/tabbar-1", PagesTabbarTabbar1Tabbar1);
   __definePage("pages/user/login-or-register", PagesUserLoginOrRegister);
   __definePage("pages/tabbar/tabbar-2/tabbar-2", PagesTabbarTabbar2Tabbar2);
@@ -9499,7 +9473,6 @@ ${i3}
   __definePage("pages/tabbar/tabbar-1/messages", PagesTabbarTabbar1Messages);
   __definePage("pages/tabbar/tabbar-1/status", PagesTabbarTabbar1Status);
   __definePage("pages/tabbar/tabbar-5/bind_uid", PagesTabbarTabbar5Bind_uid);
-  __definePage("pages/tabbar/tabbar-5/address", PagesTabbarTabbar5Address);
   __definePage("pages/tabbar/tabbar-5/help", PagesTabbarTabbar5Help);
   __definePage("pages/tabbar/tabbar-5/setting/language", PagesTabbarTabbar5SettingLanguage);
   __definePage("pages/tabbar/tabbar-5/setting/support", PagesTabbarTabbar5SettingSupport);
@@ -9531,7 +9504,7 @@ ${i3}
       };
     }
   };
-  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "E:/code/qianduan/model/SmartEyeApp/App.vue"]]);
+  const App = /* @__PURE__ */ _export_sfc(_sfc_main, [["__file", "C:/Users/86171/Desktop/Code/Python_Code/code/挑战杯/SmartEyeApp/App.vue"]]);
   function createApp() {
     const app = vue.createVueApp(App);
     return {

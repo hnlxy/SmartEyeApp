@@ -18,10 +18,6 @@
 					style="width: 100vw; height: 20vw;" title="绑定UID" note="" showArrow
 					thumb="../../../static/img/user/setting/change_password.png" thumb-size="sm" rightText="" />
 
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/address')"
-					style="width: 100vw; height: 20vw;" title="地址" note="" showArrow
-					thumb="../../../static/img/user/address.png" thumb-size="sm" rightText="" />
-
 				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/help')"
 					style="width: 100vw; height: 20vw;" title="帮助与反馈" note="" showArrow
 					thumb="../../../static/img/user/text.png" thumb-size="sm" rightText="" />

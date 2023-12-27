@@ -3,7 +3,6 @@
 		<view class="dates">
 			<view v-for="(dateInfo, index) in dates" :key="index" :class="{ 'selected': index === selectedIndex }"
 				class="date" @click="selectDate(index)">
-				<!-- <view>{{ dateInfo.week }}</view> -->
 				<view>{{ dateInfo.day }}</view>
 			</view>
 		</view>
@@ -38,15 +37,11 @@
 	for (let i = 6; i >= 0; i--) {
 		let day = new Date();
 		day.setDate(day.getDate() - i);
-		const weekday = day.toLocaleDateString('en-US', {
-			weekday: 'short'
-		});
 		const monthDay = day.toLocaleDateString('en-US', {
 			month: 'numeric',
 			day: 'numeric'
 		});
 		dates.push({
-			// week: weekday,
 			day: monthDay
 		});
 	}

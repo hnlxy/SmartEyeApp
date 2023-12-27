@@ -80,12 +80,6 @@
 			}
 		},
 		{
-		    "path": "pages/tabbar/tabbar-5/address",
-		    "style": {
-				"navigationBarTitleText": "地址"
-			}
-		},
-		{
 		    "path": "pages/tabbar/tabbar-5/help",
 		    "style": {
 				"navigationBarTitleText": "帮助中心"

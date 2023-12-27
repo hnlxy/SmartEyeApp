@@ -2,14 +2,13 @@
 	<view class="container">
 		<view class="user">
 			<image class="head-pic" :src="selectedUser.avatar"></image>
-			<text class="welcome">{{ selectedUser.name }}</text>
+			<picker mode="selector" :range="elder" @change="switchUser">
+				<view class="welcome">
+					{{ selectedUser.name }}
+				</view>
+			</picker>
 			<image class="notice" src="../../../static/img/tabbar/news.png" mode="aspectFit"
 				@click="goToPage('/pages/tabbar/tabbar-1/messages')"></image>
-			<select class="user-select" @change="switchUser($event)">
-				<option v-for="user in users" :value="user.id" :key="user.id">
-					{{ user.name }}
-				</option>
-			</select>
 		</view>
 		<view class="row">
 			<uni-section>
@@ -58,7 +57,7 @@
 	import {
 		ref
 	} from 'vue';
-	const users = ref([{
+	const elders = [{
 			id: '1',
 			name: 'Thomas',
 			avatar: '../../../static/img/face/face3.png',
@@ -91,10 +90,11 @@
 				heartRate: '72bpm'
 			}
 		},
-	]);
+	];
+	const elder = elders.map(e => e.name);
 
 	// 当前选中的用户
-	const selectedUser = ref(users.value[0]);
+	const selectedUser = ref(elders[0]);
 	const goToPage = (path, params = {}) => {
 		const query = Object.entries(params)
 			.map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
@@ -107,9 +107,9 @@
 	};
 
 	const switchUser = (event) => {
-		const userId = event.target.value;
-		const user = users.value.find(u => u.id === userId);
-		selectedUser.value = user || users.value[0];
+		const selectedIndex = event.detail.value;
+		const selectedElder = elders[selectedIndex];
+		selectedUser.value = selectedElder;
 	};
 </script>
 

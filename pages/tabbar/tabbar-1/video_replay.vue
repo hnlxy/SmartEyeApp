@@ -8,7 +8,7 @@
 	import {
 		ref
 	} from 'vue';
-	const videoSrc = ref('/static/video.mp4');
+	const videoSrc = ref('/static/video/teach/fanshen.mp4');
 </script>
 
 <style>

@@ -56,12 +56,6 @@
 		background-color: #E0F0E9;
 	}
 
-	.title {
-		margin-top: 15%;
-		font-size: 24px;
-		color: #333;
-	}
-
 	.form {
 		width: 100%;
 	}

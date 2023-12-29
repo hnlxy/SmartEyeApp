@@ -30,3 +30,20 @@
 		border-radius: 10px;
 		line-height: 25px;
 }
+.send-code-button {
+		background-color: #007aff;
+		color: white;
+		padding: 10px;
+		border-radius: 4px;
+		line-height: 25px;
+		cursor: pointer;
+		white-space: nowrap;
+}
+.send-code-button:disabled {
+		background-color: #ccc;
+		cursor: not-allowed;
+}
+.code-input-container {
+	    display: flex;
+	    align-items: baseline;
+}

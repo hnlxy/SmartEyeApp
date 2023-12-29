@@ -1,34 +1,38 @@
 
-.calendar {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		padding: 0.625rem;
-		margin-top: 5%;
+/* 页面整体布局 */
+uni-view {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
 }
-.dates {
-		display: flex;
-		justify-content: space-around;
-		width: 100%;
+
+/* 下拉选择器样式 */
+uni-picker {
+  margin: 20px 0;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
 }
-.date {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		width: calc(100% / 7);
-		cursor: pointer;
-		transition: transform 0.3s;
-		font-size: 0.875rem;
+
+/* 报告详情区域 */
+.report-details {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 20px;
 }
-.date.selected {
-		background-color: #FFC0CB;
-		border-radius: 0.78125rem;
-		padding: 0.3125rem;
-		transform: scale(1.1);
+
+/* 文本样式 */
+uni-text {
+  line-height: 1.6;
+  color: #333;
+  font-size: 16px;
+  margin: 5px 0;
 }
-.divider {
-		height: 1px;
-		background-color: #e0e0e0;
-		width: 100%;
-		margin: 20px 0;
-}
+

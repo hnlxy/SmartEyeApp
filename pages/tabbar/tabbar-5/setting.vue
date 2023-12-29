@@ -10,7 +10,7 @@
 					thumb="../../../static/img/user/setting/support.png"
 					thumb-size="sm" rightText=""/>
 					
-				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/change_PIN')" style="width: 100vw; height: 20vw;" title="更改PIN" note="" showArrow
+				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/change_PIN')" style="width: 100vw; height: 20vw;" title="修改密码" note="" showArrow
 					thumb="../../../static/img/user/setting/change_password.png"
 					thumb-size="sm" rightText=""/>
 			</uni-list>
@@ -30,7 +30,7 @@
 				<uni-list-item clickable @click="goToPage('/pages/tabbar/tabbar-5/setting/about_us')" style="width: 100vw; height: 20vw;" title="关于我们" note=""
 					thumb="../../../static/img/user/setting/about_us.png"
 					thumb-size="sm" rightText="" showArrow/>
-				<uni-list-item class=" slot-text" clickable @click="goToPage('/pages/user/login-or-register')" style="width: 100vw; height: 20vw;" title="退出账号" note=""
+				<uni-list-item class=" slot-text" clickable @click="goToPage('/pages/user/login')" style="width: 100vw; height: 20vw;" title="退出账号" note=""
 					thumb="../../../static/img/user/setting/close.png"
 					thumb-size="sm"/>
 			</uni-list>

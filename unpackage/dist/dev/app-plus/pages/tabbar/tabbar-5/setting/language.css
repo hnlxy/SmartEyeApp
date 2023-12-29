@@ -1,0 +1,33 @@
+
+/* 全局样式 */
+uni-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 文本样式 */
+uni-text {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* 选择器样式 */
+uni-picker {
+  border: 1px solid #999;
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #f3f3f3;
+}
+
+/* 当前语言显示样式 */
+.current-language {
+  margin-top: 20px;
+  color: #666;
+  font-size: 16px;
+}

@@ -45,7 +45,7 @@
 
 	const openChat = (chatId) => {
 		console.log("打开聊天", chatId);
-		const url = `/pages/chat/chats?chatId=${chatId}`;
+		const url = `/pages/tabbar/tabbar-4/chats?chatId=${chatId}`;
 		uni.navigateTo({
 			url: url
 		})

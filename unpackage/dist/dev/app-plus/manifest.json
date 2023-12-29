@@ -106,7 +106,7 @@
       "fontSize": "10px",
       "iconWidth": "45px",
       "spacing": "3px",
-      "height": "80px",
+      "height": "65px",
       "backgroundColor": "#ffbb98",
       "iconfontSrc": "static/fonts/iconfont1.ttf",
       "list": [
@@ -141,11 +141,7 @@
         }
       ],
       "selectedIndex": 0,
-      "shown": true,
-      "child": [
-        "lauchwebview"
-      ],
-      "selected": 0
+      "shown": true
     }
   },
   "locale": "zh-Hans",

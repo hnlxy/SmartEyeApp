@@ -1,7 +1,7 @@
 <template>
   <view class="page-container">
     <view class="logo-container">
-      <image class="logo" src="/static/logo.png" />
+      <image class="logo" src="/static/logo.jpg" />
     </view>
     <view class="list-container">
       <view class="list-item" @click="goToVersion">
